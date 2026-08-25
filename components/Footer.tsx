@@ -107,11 +107,11 @@ export function Footer() {
             <ul className="flex flex-col gap-2 text-sm">
               <li>
                 <a
-                  href="tel:+919972090190"
+                  href="tel:+917416238424"
                   className="font-mono transition-opacity hover:opacity-70"
                   style={{ color: "rgba(250,248,245,0.5)", fontFamily: "var(--font-mono)" }}
                 >
-                  +91 99720 90190
+                  +91 74162 38424
                 </a>
               </li>
               <li>

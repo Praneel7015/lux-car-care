@@ -96,11 +96,11 @@ export function Header() {
           {/* Desktop right */}
           <div className="hidden items-center gap-4 md:flex">
             <a
-              href="tel:+919972090190"
+              href="tel:+917416238424"
               className="font-mono text-sm font-medium tracking-tight transition-opacity hover:opacity-70"
               style={{ color: "rgba(250,248,245,0.45)", fontFamily: "var(--font-mono)" }}
             >
-              +91 99720 90190
+              +91 74162 38424
             </a>
             <Link
               href="/contact"
@@ -215,11 +215,11 @@ export function Header() {
 
           <div className="mt-4 border-t pt-4" style={{ borderColor: "rgba(250,248,245,0.08)" }}>
             <a
-              href="tel:+919972090190"
+              href="tel:+917416238424"
               className="block font-mono text-sm transition-opacity hover:opacity-70"
               style={{ color: "rgba(250,248,245,0.4)", fontFamily: "var(--font-mono)" }}
             >
-              +91 99720 90190
+              +91 74162 38424
             </a>
           </div>
 

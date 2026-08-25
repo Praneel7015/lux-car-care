@@ -188,7 +188,7 @@ export function BookingForm() {
           Your request is with us. Expect a confirmation call or WhatsApp message soon.
         </p>
         <p className="mt-1 text-sm font-medium" style={{ color: "var(--color-mahogany)" }}>
-          <a href="tel:+919972090190" className="hover:underline">+91 99720 90190</a>
+          <a href="tel:+917416238424" className="hover:underline">+91 74162 38424</a>
         </p>
         <button
           onClick={() => { setState("idle"); setErrors({}); setTouched({}); }}
@@ -220,7 +220,7 @@ export function BookingForm() {
           aria-live="assertive"
         >
           Something went wrong. Please try again or{" "}
-          <a href="tel:+919972090190" className="underline">call us directly</a>.
+          <a href="tel:+917416238424" className="underline">call us directly</a>.
         </div>
       )}
 

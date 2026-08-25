@@ -48,7 +48,7 @@ const JSON_LD = {
   "@id": "https://lux-car-care.sindhole.com/#business",
   name: "Luxury Car Care",
   image: "https://lux-car-care.sindhole.com/hero-car-wash.jpg",
-  telephone: "+91-9972090190",
+  telephone: "+91-7416238424",
   email: "car-care@sindhole.com",
   priceRange: "₹₹",
   address: {
@@ -126,7 +126,7 @@ export default function Home() {
               return (
                 <div
                   key={service.id}
-                  className="relative flex flex-col justify-between p-6 transition-colors duration-200"
+                  className="flex flex-col justify-between p-6 transition-colors duration-200"
                   style={{
                     backgroundColor: isHighlighted
                       ? "var(--color-mahogany)"
@@ -135,20 +135,19 @@ export default function Home() {
                     borderTop: isHighlighted ? "2px solid var(--color-gold)" : "2px solid transparent",
                   }}
                 >
-                  {isHighlighted && (
-                    <span
-                      className="absolute right-4 top-4 rounded-full px-2.5 py-0.5 font-mono text-[10px] font-semibold uppercase tracking-wider"
-                      style={{
-                        backgroundColor: "var(--color-gold)",
-                        color: "var(--color-obsidian)",
-                        fontFamily: "var(--font-mono)",
-                      }}
-                    >
-                      Most Popular
-                    </span>
-                  )}
-
                   <div>
+                    {isHighlighted && (
+                      <span
+                        className="mb-3 inline-block whitespace-nowrap rounded-full px-2.5 py-0.5 font-mono text-[10px] font-semibold uppercase tracking-wider"
+                        style={{
+                          backgroundColor: "var(--color-gold)",
+                          color: "var(--color-obsidian)",
+                          fontFamily: "var(--font-mono)",
+                        }}
+                      >
+                        Most Popular
+                      </span>
+                    )}
                     <h3
                       className="text-xl font-bold leading-snug"
                       style={{

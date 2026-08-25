@@ -57,7 +57,7 @@ const SECTIONS = [
   },
   {
     heading: "11. Grievance Officer / Contact",
-    body: `For any questions, requests, or complaints about this policy or your personal data, contact:\n\nLuxury Car Care\nBidar, Karnataka, India\nEmail: car-care@sindhole.com\nPhone/WhatsApp: +91 99720 90190`,
+    body: `For any questions, requests, or complaints about this policy or your personal data, contact:\n\nLuxury Car Care\nBidar, Karnataka, India\nEmail: car-care@sindhole.com\nPhone/WhatsApp: +91 74162 38424`,
   },
 ];
 

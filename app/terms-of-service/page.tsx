@@ -53,7 +53,7 @@ const SECTIONS = [
   },
   {
     heading: "10. Contact",
-    body: "Luxury Car Care\nBidar, Karnataka, India\nEmail: car-care@sindhole.com\nPhone/WhatsApp: +91 99720 90190",
+    body: "Luxury Car Care\nBidar, Karnataka, India\nEmail: car-care@sindhole.com\nPhone/WhatsApp: +91 74162 38424",
   },
 ];
 

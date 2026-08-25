@@ -27,17 +27,56 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://car-care.sindhole.com"),
+  metadataBase: new URL("https://lux-car-care.sindhole.com"),
   title: {
     default: "Luxury Car Care — Car Wash & Detailing in Bidar",
     template: "%s | Luxury Car Care",
   },
   description:
     "Quick, affordable car wash and detailing in Bidar, Karnataka. Open 6 AM to 9 PM every day. Walk-ins welcome.",
+  keywords: [
+    "car wash Bidar",
+    "car detailing Bidar",
+    "car wash Karnataka",
+    "luxury car care",
+    "express car wash",
+    "ceramic coating Bidar",
+    "interior cleaning Bidar",
+  ],
+  authors: [{ name: "Luxury Car Care", url: "https://lux-car-care.sindhole.com" }],
+  creator: "Luxury Car Care",
+  publisher: "Luxury Car Care",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     siteName: "Luxury Car Care",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "/hero-car-wash.jpg",
+        width: 1024,
+        height: 683,
+        alt: "Luxury Car Care — Car Wash & Detailing in Bidar",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Luxury Car Care — Car Wash & Detailing in Bidar",
+    description: "Quick, affordable car wash and detailing in Bidar, Karnataka. Open 6 AM to 9 PM every day.",
+    images: ["/hero-car-wash.jpg"],
+  },
+  alternates: {
+    canonical: "https://lux-car-care.sindhole.com",
   },
 };
 

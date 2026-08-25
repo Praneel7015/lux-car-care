@@ -5,9 +5,12 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
     "Privacy Policy for Luxury Car Care — how we collect, use, and protect your personal data under India's Digital Personal Data Protection Act, 2023.",
+  alternates: { canonical: "https://lux-car-care.sindhole.com/privacy-policy" },
+  robots: { index: false, follow: false },
   openGraph: {
     title: "Privacy Policy — Luxury Car Care",
-    url: "https://car-care.sindhole.com/privacy-policy",
+    url: "https://lux-car-care.sindhole.com/privacy-policy",
+    images: [{ url: "https://lux-car-care.sindhole.com/hero-car-wash.jpg", width: 1024, height: 683, alt: "Luxury Car Care" }],
   },
 };
 
@@ -94,7 +97,7 @@ export default function PrivacyPolicyPage() {
             style={{ color: "var(--color-stone)" }}
           >
             Luxury Car Care (&ldquo;we,&rdquo; &ldquo;us,&rdquo; &ldquo;our&rdquo;) operates this website
-            (car-care.sindhole.com) and the services offered through it. This policy explains what personal
+            (lux-car-care.sindhole.com) and the services offered through it. This policy explains what personal
             data we collect, why, and the rights you have over it.
           </p>
 

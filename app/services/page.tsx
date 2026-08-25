@@ -6,11 +6,13 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Services & Pricing",
   description:
-    "Full pricing for car wash and detailing services at Luxury Car Care in Bidar. Express wash, full detail, ceramic coating, and add-ons.",
+    "Full pricing for car wash and detailing at Luxury Car Care in Bidar. Express wash from ₹149, full detailing, ceramic coating for hatchback, sedan, and SUV.",
+  alternates: { canonical: "https://lux-car-care.sindhole.com/services" },
   openGraph: {
     title: "Services & Pricing — Luxury Car Care",
     description: "Car wash and detailing prices for hatchback, sedan, and SUV in Bidar, Karnataka.",
-    url: "https://car-care.sindhole.com/services",
+    url: "https://lux-car-care.sindhole.com/services",
+    images: [{ url: "https://lux-car-care.sindhole.com/sponge-headlight.jpg", width: 1024, height: 683, alt: "Hand detailing a car headlight at Luxury Car Care Bidar" }],
   },
 };
 

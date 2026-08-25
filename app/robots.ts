@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://car-care.sindhole.com/sitemap.xml",
+    sitemap: "https://lux-car-care.sindhole.com/sitemap.xml",
   };
 }

@@ -3,12 +3,14 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "About Us",
-  description: "Learn about Luxury Car Care in Bidar — our story, our team, and our commitment to quality car washing and detailing.",
+  title: "About Luxury Car Care — Our Story & Values",
+  description: "Learn about Luxury Car Care in Bidar — our story, values, and commitment to quality car washing and detailing. Serving Bidar since day one.",
+  alternates: { canonical: "https://lux-car-care.sindhole.com/about" },
   openGraph: {
     title: "About — Luxury Car Care",
     description: "A local Bidar business committed to clean cars, fair pricing, and friendly service.",
-    url: "https://car-care.sindhole.com/about",
+    url: "https://lux-car-care.sindhole.com/about",
+    images: [{ url: "https://lux-car-care.sindhole.com/suv-foam-wash.jpg", width: 1024, height: 683, alt: "Worker foam-washing an SUV at Luxury Car Care Bidar" }],
   },
 };
 

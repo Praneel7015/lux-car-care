@@ -3,12 +3,14 @@ import Image from "next/image";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 
 export const metadata: Metadata = {
-  title: "Gallery",
-  description: "See our car wash and detailing results. Before and after photos from Luxury Car Care in Bidar, Karnataka.",
+  title: "Gallery — Before & After Car Wash Photos",
+  description: "Before and after car wash and detailing photos from Luxury Car Care in Bidar, Karnataka. See what we can do for your car.",
+  alternates: { canonical: "https://lux-car-care.sindhole.com/gallery" },
   openGraph: {
     title: "Gallery — Luxury Car Care",
     description: "Before and after car wash photos from Luxury Car Care in Bidar.",
-    url: "https://car-care.sindhole.com/gallery",
+    url: "https://lux-car-care.sindhole.com/gallery",
+    images: [{ url: "https://lux-car-care.sindhole.com/suv-foam-wash.jpg", width: 1024, height: 683, alt: "Worker applying foam wash to an SUV at Luxury Car Care Bidar" }],
   },
 };
 

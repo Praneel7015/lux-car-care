@@ -5,9 +5,12 @@ export const metadata: Metadata = {
   title: "Terms of Service",
   description:
     "Terms of Service for Luxury Car Care — governing your use of our website and car wash services in Bidar, Karnataka.",
+  alternates: { canonical: "https://lux-car-care.sindhole.com/terms-of-service" },
+  robots: { index: false, follow: false },
   openGraph: {
     title: "Terms of Service — Luxury Car Care",
-    url: "https://car-care.sindhole.com/terms-of-service",
+    url: "https://lux-car-care.sindhole.com/terms-of-service",
+    images: [{ url: "https://lux-car-care.sindhole.com/hero-car-wash.jpg", width: 1024, height: 683, alt: "Luxury Car Care" }],
   },
 };
 

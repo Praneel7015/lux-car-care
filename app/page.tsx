@@ -7,15 +7,18 @@ import { SERVICES } from "@/lib/services";
 export const metadata: Metadata = {
   title: "Luxury Car Care — Car Wash & Detailing in Bidar",
   description:
-    "Quick, affordable car wash and detailing in Bidar, Karnataka. Open 6 AM to 9 PM, every day. Walk-ins welcome.",
+    "Quick, affordable car wash and detailing in Bidar, Karnataka. Express wash from ₹149. Open 6 AM to 9 PM, every day. Walk-ins welcome.",
+  alternates: {
+    canonical: "https://lux-car-care.sindhole.com",
+  },
   openGraph: {
     title: "Luxury Car Care — Car Wash & Detailing in Bidar",
     description:
       "Quick, affordable car wash and detailing in Bidar, Karnataka. Open 6 AM to 9 PM, every day.",
-    url: "https://car-care.sindhole.com",
+    url: "https://lux-car-care.sindhole.com",
     images: [
       {
-        url: "https://car-care.sindhole.com/hero-car-wash.jpg",
+        url: "https://lux-car-care.sindhole.com/hero-car-wash.jpg",
         width: 1024,
         height: 683,
         alt: "Luxury Car Care — Car Wash & Detailing in Bidar",
@@ -42,16 +45,26 @@ const TESTIMONIALS = [
 const JSON_LD = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
+  "@id": "https://lux-car-care.sindhole.com/#business",
   name: "Luxury Car Care",
-  image: "https://car-care.sindhole.com/hero-car-wash.jpg",
+  image: "https://lux-car-care.sindhole.com/hero-car-wash.jpg",
   telephone: "+91-9972090190",
   email: "car-care@sindhole.com",
+  priceRange: "₹₹",
   address: {
     "@type": "PostalAddress",
+    streetAddress: "Bidar",
     addressLocality: "Bidar",
     addressRegion: "Karnataka",
+    postalCode: "585401",
     addressCountry: "IN",
   },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 17.8964,
+    longitude: 77.5137,
+  },
+  hasMap: "https://www.google.com/maps/place/Luxury+Car+Care",
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
@@ -60,7 +73,13 @@ const JSON_LD = {
       closes: "21:00",
     },
   ],
-  url: "https://car-care.sindhole.com",
+  url: "https://lux-car-care.sindhole.com",
+  currenciesAccepted: "INR",
+  paymentAccepted: "Cash, UPI",
+  areaServed: {
+    "@type": "City",
+    name: "Bidar",
+  },
 };
 
 export default function Home() {

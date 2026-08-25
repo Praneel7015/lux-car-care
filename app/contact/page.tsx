@@ -5,11 +5,13 @@ import { MapEmbed } from "@/components/MapEmbed";
 
 export const metadata: Metadata = {
   title: "Contact & Booking",
-  description: "Book a car wash or detailing at Luxury Car Care in Bidar. Call, WhatsApp, or fill in the booking form. Open 6 AM to 9 PM every day.",
+  description: "Book a car wash or detailing at Luxury Car Care in Bidar. Call or WhatsApp +91 99720 90190, or use our online form. Open 6 AM to 9 PM every day.",
+  alternates: { canonical: "https://lux-car-care.sindhole.com/contact" },
   openGraph: {
     title: "Contact & Booking — Luxury Car Care",
     description: "Book a car wash in Bidar. Call or WhatsApp +91 99720 90190, or use our online booking form.",
-    url: "https://car-care.sindhole.com/contact",
+    url: "https://lux-car-care.sindhole.com/contact",
+    images: [{ url: "https://lux-car-care.sindhole.com/hero-car-wash.jpg", width: 1024, height: 683, alt: "Luxury Car Care Bidar — book a wash" }],
   },
 };
 

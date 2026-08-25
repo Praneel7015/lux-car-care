@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 const LAST_UPDATED = new Date("2025-08-25");
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://car-care.sindhole.com";
+  const base = "https://lux-car-care.sindhole.com";
 
   return [
     { url: base, lastModified: LAST_UPDATED, changeFrequency: "monthly", priority: 1 },

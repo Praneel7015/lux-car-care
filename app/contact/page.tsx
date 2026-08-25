@@ -172,7 +172,7 @@ export default function ContactPage() {
                   Call Feedback Line
                 </a>
                 <a
-                  href="https://wa.me/919550092810?text=Hi%2C%20I%27d%20like%20to%20share%20feedback%20about%20my%20recent%20visit"
+                  href="https://wa.me/919550092810?text=I%20would%20like%20to%20give%20feedback%20on%20my%20recent%20carwash"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex w-full items-center justify-center gap-2 rounded-xl border px-5 py-3 text-sm font-semibold transition-opacity duration-150 hover:opacity-90 sm:w-auto"

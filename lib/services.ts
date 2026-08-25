@@ -10,9 +10,11 @@ export interface Service {
   id: string;
   name: string;
   tagline: string;
-  pricing: ServiceTier | "by-quote";
-  fromPrice?: string; // Display string for the homepage card
+  pricing: ServiceTier | "by-quote" | "flat";
+  flatPrice?: string;   // used when pricing === "flat"
+  fromPrice?: string;   // display string for homepage card
   badge?: string;
+  vehicleCategory?: "car" | "bike"; // defaults to "car"
 }
 
 export interface Addon {
@@ -26,11 +28,11 @@ export const SERVICES: Service[] = [
     name: "Express Exterior Wash",
     tagline: "A fast rinse and shine when you're short on time.",
     pricing: {
-      hatchback: "₹149",
-      sedan: "₹199",
-      suv: "₹249",
+      hatchback: "₹199",
+      sedan: "₹249",
+      suv: "₹299",
     },
-    fromPrice: "From ₹149",
+    fromPrice: "From ₹199",
   },
   {
     id: "exterior-interior",
@@ -42,6 +44,18 @@ export const SERVICES: Service[] = [
       suv: "₹449",
     },
     fromPrice: "From ₹299",
+  },
+  {
+    id: "exterior-interior-underbody",
+    name: "Exterior + Interior + Under Body Wash",
+    tagline: "Full clean inside, vacuum cleaning, under body water wash and tyre polish.",
+    pricing: {
+      hatchback: "₹399",
+      sedan: "₹499",
+      suv: "₹599",
+    },
+    fromPrice: "From ₹399",
+    badge: "Popular",
   },
   {
     id: "full-detailing",
@@ -61,6 +75,15 @@ export const SERVICES: Service[] = [
     pricing: "by-quote",
     fromPrice: "By quote",
     badge: "Premium",
+  },
+  {
+    id: "express-bike-wash",
+    name: "Express Bike Wash",
+    tagline: "Quick exterior rinse and shine for two-wheelers.",
+    pricing: "flat",
+    flatPrice: "₹64",
+    fromPrice: "₹64",
+    vehicleCategory: "bike",
   },
 ];
 
@@ -83,5 +106,6 @@ export function getServiceById(id: string): Service | undefined {
 
 export function formatPrice(service: Service, vehicle: VehicleType): string {
   if (service.pricing === "by-quote") return "By quote";
+  if (service.pricing === "flat") return service.flatPrice ?? "—";
   return service.pricing[vehicle];
 }

@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     template: "%s | Luxury Car Care",
   },
   description:
-    "Quick, affordable car wash and detailing in Bidar, Karnataka. Open 6 AM to 9 PM every day. Walk-ins welcome.",
+    "Quick, affordable car wash and detailing in Bidar, Karnataka. Express wash from ₹199. Open 6 AM to 9 PM every day. Walk-ins welcome.",
   keywords: [
     "car wash Bidar",
     "car detailing Bidar",

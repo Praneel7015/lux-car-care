@@ -7,7 +7,7 @@ import { SERVICES } from "@/lib/services";
 export const metadata: Metadata = {
   title: "Luxury Car Care — Car Wash & Detailing in Bidar",
   description:
-    "Quick, affordable car wash and detailing in Bidar, Karnataka. Express wash from ₹149. Open 6 AM to 9 PM, every day. Walk-ins welcome.",
+    "Quick, affordable car wash and detailing in Bidar, Karnataka. Express wash from ₹199. Open 6 AM to 9 PM, every day. Walk-ins welcome.",
   alternates: {
     canonical: "https://lux-car-care.sindhole.com",
   },
@@ -118,11 +118,11 @@ export default function Home() {
 
           {/* Tier strip */}
           <div
-            className="grid gap-px sm:grid-cols-2 lg:grid-cols-4"
+            className="grid gap-px sm:grid-cols-2 lg:grid-cols-3"
             style={{ backgroundColor: "var(--color-border)" }}
           >
             {SERVICES.map((service) => {
-              const isHighlighted = service.id === "full-detailing";
+              const isHighlighted = service.id === "exterior-interior-underbody";
               return (
                 <div
                   key={service.id}

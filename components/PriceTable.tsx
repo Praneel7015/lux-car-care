@@ -70,26 +70,42 @@ export function PriceTable() {
                       {service.tagline}
                     </p>
                   </td>
-                  {VEHICLE_TYPES.map((v) => (
+
+                  {service.pricing === "flat" ? (
+                    /* Flat-price services (e.g. bike wash) — span all vehicle columns */
                     <td
-                      key={v.value}
+                      colSpan={VEHICLE_TYPES.length}
                       className="px-4 py-4 text-center font-mono font-medium"
-                      style={{
-                        color:
-                          service.pricing === "by-quote"
-                            ? "var(--color-muted)"
-                            : "var(--color-mahogany)",
-                        fontFamily: "var(--font-mono)",
-                        fontVariantNumeric: "tabular-nums",
-                      }}
+                      style={{ color: "var(--color-mahogany)", fontFamily: "var(--font-mono)", fontVariantNumeric: "tabular-nums" }}
                     >
-                      {service.pricing === "by-quote"
-                        ? v.value === "hatchback"
-                          ? "By quote"
-                          : "—"
-                        : formatPrice(service, v.value)}
+                      {service.flatPrice}
+                      <span className="ml-1.5 text-xs font-normal" style={{ color: "var(--color-muted)" }}>
+                        (fixed)
+                      </span>
                     </td>
-                  ))}
+                  ) : (
+                    VEHICLE_TYPES.map((v) => (
+                      <td
+                        key={v.value}
+                        className="px-4 py-4 text-center font-mono font-medium"
+                        style={{
+                          color:
+                            service.pricing === "by-quote"
+                              ? "var(--color-muted)"
+                              : "var(--color-mahogany)",
+                          fontFamily: "var(--font-mono)",
+                          fontVariantNumeric: "tabular-nums",
+                        }}
+                      >
+                        {service.pricing === "by-quote"
+                          ? v.value === "hatchback"
+                            ? "By quote"
+                            : "—"
+                          : formatPrice(service, v.value)}
+                      </td>
+                    ))
+                  )}
+
                   <td className="px-4 py-4 text-right">
                     <Link
                       href={`/contact?service=${service.id}`}

@@ -1,8 +1,7 @@
-export type VehicleType = "hatchback" | "sedan" | "suv";
+export type VehicleType = "hatchback-sedan" | "suv";
 
 export interface ServiceTier {
-  hatchback: string;
-  sedan: string;
+  "hatchback-sedan": string;
   suv: string;
 }
 
@@ -11,10 +10,10 @@ export interface Service {
   name: string;
   tagline: string;
   pricing: ServiceTier | "by-quote" | "flat";
-  flatPrice?: string;   // used when pricing === "flat"
-  fromPrice?: string;   // display string for homepage card
+  flatPrice?: string;
+  fromPrice?: string;
   badge?: string;
-  vehicleCategory?: "car" | "bike"; // defaults to "car"
+  vehicleCategory?: "car" | "bike";
 }
 
 export interface Addon {
@@ -28,8 +27,7 @@ export const SERVICES: Service[] = [
     name: "Express Exterior Wash",
     tagline: "A fast rinse and shine when you're short on time.",
     pricing: {
-      hatchback: "₹199",
-      sedan: "₹249",
+      "hatchback-sedan": "₹199",
       suv: "₹299",
     },
     fromPrice: "From ₹199",
@@ -39,8 +37,7 @@ export const SERVICES: Service[] = [
     name: "Exterior + Interior Wash",
     tagline: "The full clean, inside and out.",
     pricing: {
-      hatchback: "₹299",
-      sedan: "₹349",
+      "hatchback-sedan": "₹299",
       suv: "₹449",
     },
     fromPrice: "From ₹299",
@@ -50,8 +47,7 @@ export const SERVICES: Service[] = [
     name: "Exterior + Interior + Under Body Wash",
     tagline: "Full clean inside, vacuum cleaning, under body water wash and tyre polish.",
     pricing: {
-      hatchback: "₹399",
-      sedan: "₹499",
+      "hatchback-sedan": "₹399",
       suv: "₹599",
     },
     fromPrice: "From ₹399",
@@ -62,8 +58,7 @@ export const SERVICES: Service[] = [
     name: "Full Detailing",
     tagline: "Deep clean, shampoo, wax, tire shine — like new.",
     pricing: {
-      hatchback: "₹1,299",
-      sedan: "₹1,599",
+      "hatchback-sedan": "₹1,299",
       suv: "₹1,999",
     },
     fromPrice: "From ₹1,299",
@@ -88,15 +83,13 @@ export const SERVICES: Service[] = [
 ];
 
 export const ADDONS: Addon[] = [
-  { name: "Tire Shine", price: "₹99" },
-  { name: "Odor Treatment", price: "₹149" },
-  { name: "Headlight Restoration", price: "₹499" },
-  { name: "Mat Shampoo", price: "₹99/mat" },
+  { name: "Tire Shine", price: "₹49" },
+  { name: "Odor Treatment", price: "₹49" },
+  { name: "Mat Shampoo", price: "₹49/mat" },
 ];
 
 export const VEHICLE_TYPES: { value: VehicleType; label: string }[] = [
-  { value: "hatchback", label: "Hatchback" },
-  { value: "sedan", label: "Sedan" },
+  { value: "hatchback-sedan", label: "Hatchback / Sedan" },
   { value: "suv", label: "SUV" },
 ];
 

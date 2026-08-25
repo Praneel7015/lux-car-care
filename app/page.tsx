@@ -229,7 +229,7 @@ export default function Home() {
             >
               {[
                 { stat: "15h", label: "Open every day", sub: "6 AM – 9 PM" },
-                { stat: "₹199*", label: "Starts from", sub: "Express wash", footnote: "* Hatchback / sedan. SUV rates higher." },
+                { stat: "₹199*", label: "Starts from", sub: "Express wash", footnote: "* Hatchback & sedan rate. SUV rates higher." },
                 { stat: "6", label: "Services", sub: "Express to ceramic" },
                 { stat: "365", label: "Days a year", sub: "No days off" },
               ].map(({ stat, label, sub, footnote }) => (

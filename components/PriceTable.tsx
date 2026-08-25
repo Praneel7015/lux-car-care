@@ -98,7 +98,7 @@ export function PriceTable() {
                         }}
                       >
                         {service.pricing === "by-quote"
-                          ? v.value === "hatchback"
+                          ? v.value === "hatchback-sedan"
                             ? "By quote"
                             : "—"
                           : formatPrice(service, v.value)}

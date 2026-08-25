@@ -230,10 +230,10 @@ export default function Home() {
             >
               {[
                 { stat: "15h", label: "Open every day", sub: "6 AM – 9 PM" },
-                { stat: "₹149", label: "Starts from", sub: "Express wash" },
-                { stat: "4", label: "Services", sub: "Express to ceramic" },
+                { stat: "₹199*", label: "Starts from", sub: "Express wash", footnote: "* Hatchback / sedan. SUV rates higher." },
+                { stat: "6", label: "Services", sub: "Express to ceramic" },
                 { stat: "365", label: "Days a year", sub: "No days off" },
-              ].map(({ stat, label, sub }) => (
+              ].map(({ stat, label, sub, footnote }) => (
                 <div
                   key={stat}
                   className="flex flex-col justify-between p-6"
@@ -253,11 +253,18 @@ export default function Home() {
                       {label}
                     </span>
                   </dt>
-                  <dd
-                    className="mt-3 font-mono text-xs"
-                    style={{ color: "var(--color-muted)", fontFamily: "var(--font-mono)" }}
-                  >
-                    {sub}
+                  <dd className="mt-3" style={{ fontFamily: "var(--font-mono)" }}>
+                    <span className="font-mono text-xs" style={{ color: "var(--color-muted)" }}>
+                      {sub}
+                    </span>
+                    {footnote && (
+                      <span
+                        className="mt-1.5 block text-[10px] leading-snug"
+                        style={{ color: "var(--color-muted)", opacity: 0.75 }}
+                      >
+                        {footnote}
+                      </span>
+                    )}
                   </dd>
                 </div>
               ))}

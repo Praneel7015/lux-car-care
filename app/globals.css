@@ -1,0 +1,204 @@
+@import "tailwindcss";
+
+/* ── Design Tokens ─────────────────────────────────────────── */
+@theme {
+  /* Colors — Light Ivory + Deep Gold */
+  --color-obsidian:   #0F0E0D;   /* header / footer / hero bg */
+  --color-mahogany:   #1C1917;   /* primary text, dark accents */
+  --color-stone:      #5C5751;   /* secondary text on light */
+  --color-parchment:  #FAFAF8;   /* main page background */
+  --color-surface:    #F0EDE8;   /* card surfaces, alternating sections */
+  --color-gold:       #C9952A;   /* CTA buttons, price highlights */
+  --color-gold-text:  #8B6510;   /* gold as text/link on light bg (passes AA) */
+  --color-muted:      #9C9489;   /* tertiary text */
+  --color-border:     #E0DAD4;   /* light warm border */
+
+  /* Typography */
+  --font-display: var(--font-playfair), "Playfair Display", Georgia, serif;
+  --font-body:    var(--font-inter), "Inter", system-ui, sans-serif;
+  --font-mono:    var(--font-ibm-plex-mono), "IBM Plex Mono", monospace;
+
+  /* Shadows */
+  --shadow-card:  0 1px 3px 0 rgb(28 25 23 / 0.07), 0 4px 16px 0 rgb(28 25 23 / 0.05);
+  --shadow-lift:  0 4px 24px 0 rgb(28 25 23 / 0.12);
+  --shadow-gold:  0 0 28px 0 rgb(201 149 42 / 0.25);
+}
+
+/* ── Base ──────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-parchment);
+  color: var(--color-mahogany);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Prevent 300ms tap delay on touch devices */
+a, button, [role="button"], select, input, textarea, label {
+  touch-action: manipulation;
+}
+
+/* Cursor affordance */
+a, button, [role="button"], label[for], select {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+/* ── Focus ring (Gold, accessible) ───────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ── Wipe Reveal Animation ─────────────────────────────────── */
+@keyframes wipe-reveal {
+  0%   { clip-path: inset(0 100% 0 0); }
+  100% { clip-path: inset(0 0% 0 0); }
+}
+
+@keyframes overlay-fade {
+  0%   { opacity: 1; }
+  60%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.wipe-reveal {
+  animation: wipe-reveal 1.1s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+.overlay-fade {
+  animation: overlay-fade 1.1s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wipe-reveal,
+  .overlay-fade {
+    animation: none;
+    clip-path: none;
+    opacity: 0;
+  }
+}
+
+/* ── Swoosh (logo accent) ─────────────────────────────────── */
+.logo-swoosh {
+  display: block;
+  width: 38px;
+  height: 4px;
+  background: var(--color-gold);
+  border-radius: 2px;
+  transform: skewX(-18deg);
+  margin-bottom: 2px;
+}
+
+/* ── Utility: section rhythm ──────────────────────────────── */
+.section-pad {
+  padding-block: 5rem;
+}
+
+@media (max-width: 768px) {
+  .section-pad {
+    padding-block: 3rem;
+  }
+}
+
+
+/* ── Base ──────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-parchment);
+  color: var(--color-mahogany);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Prevent 300ms tap delay on touch devices */
+a, button, [role="button"], select, input, textarea, label {
+  touch-action: manipulation;
+}
+
+/* Cursor affordance */
+a, button, [role="button"], label[for], select {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+/* ── Focus ring (Gold, accessible) ───────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ── Wipe Reveal Animation ─────────────────────────────────── */
+@keyframes wipe-reveal {
+  0%   { clip-path: inset(0 100% 0 0); }
+  100% { clip-path: inset(0 0% 0 0); }
+}
+
+@keyframes overlay-fade {
+  0%   { opacity: 1; }
+  60%  { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.wipe-reveal {
+  animation: wipe-reveal 1.1s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+.overlay-fade {
+  animation: overlay-fade 1.1s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wipe-reveal,
+  .overlay-fade {
+    animation: none;
+    clip-path: none;
+    opacity: 0;
+  }
+}
+
+/* ── Swoosh (logo accent) ─────────────────────────────────── */
+.logo-swoosh {
+  display: block;
+  width: 38px;
+  height: 4px;
+  background: var(--color-gold);
+  border-radius: 2px;
+  transform: skewX(-18deg);
+  margin-bottom: 2px;
+}
+
+/* ── Utility: section rhythm ──────────────────────────────── */
+.section-pad {
+  padding-block: 5rem;
+}
+
+@media (max-width: 768px) {
+  .section-pad {
+    padding-block: 3rem;
+  }
+}

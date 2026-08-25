@@ -38,7 +38,7 @@ export const SERVICES: Service[] = [
     tagline: "The full clean, inside and out.",
     pricing: {
       "hatchback-sedan": "₹299",
-      suv: "₹449",
+      suv: "₹349",
     },
     fromPrice: "From ₹299",
   },
@@ -48,7 +48,7 @@ export const SERVICES: Service[] = [
     tagline: "Full clean inside, vacuum cleaning, under body water wash and tyre polish.",
     pricing: {
       "hatchback-sedan": "₹399",
-      suv: "₹599",
+      suv: "₹499",
     },
     fromPrice: "From ₹399",
     badge: "Popular",

@@ -71,17 +71,6 @@ export default function ServicesPage() {
         aria-labelledby="pricing-table-heading"
       >
         <div className="mx-auto max-w-7xl px-5 lg:px-16">
-          <div
-            className="mb-3 rounded-xl border px-4 py-3 text-sm"
-            style={{
-              borderColor: "var(--color-gold)",
-              backgroundColor: "rgba(201,149,42,0.06)",
-              color: "var(--color-stone)",
-            }}
-          >
-            <strong style={{ color: "var(--color-mahogany)" }}>Sample pricing.</strong>{" "}
-            These figures are illustrative. Confirm actual rates with us when you visit or book.
-          </div>
           <PriceTable />
         </div>
       </section>

@@ -179,7 +179,6 @@ export function Header() {
           ref={drawerRef}
           className="relative border-b px-5 pb-6 pt-3 transition-all duration-200 ease-out"
           aria-label="Mobile navigation"
-          aria-modal="true"
           style={{
             backgroundColor: "var(--color-obsidian)",
             borderColor: "rgba(250,248,245,0.08)",

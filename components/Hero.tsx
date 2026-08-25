@@ -3,23 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-
-function useIsOpen() {
-  const [isOpen, setIsOpen] = useState<boolean | null>(null);
-
-  useEffect(() => {
-    function check() {
-      const now = new Date();
-      const h = now.getHours() + now.getMinutes() / 60;
-      setIsOpen(h >= 6 && h < 21);
-    }
-    check();
-    const id = setInterval(check, 60_000);
-    return () => clearInterval(id);
-  }, []);
-
-  return isOpen;
-}
+import { useIsOpen } from "@/lib/useIsOpen";
 
 export function Hero() {
   const [revealed, setRevealed] = useState(false);

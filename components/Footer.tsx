@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useIsOpen } from "@/lib/useIsOpen";
 import { Logo } from "./Logo";
 
 const LINKS = {
@@ -18,19 +18,6 @@ const LINKS = {
   ],
 };
 
-function useIsOpen() {
-  const [isOpen, setIsOpen] = useState<boolean | null>(null);
-  useEffect(() => {
-    const check = () => {
-      const h = new Date().getHours() + new Date().getMinutes() / 60;
-      setIsOpen(h >= 6 && h < 21);
-    };
-    check();
-    const id = setInterval(check, 60_000);
-    return () => clearInterval(id);
-  }, []);
-  return isOpen;
-}
 
 export function Footer() {
   const isOpen = useIsOpen();

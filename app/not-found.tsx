@@ -1,4 +1,11 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Page Not Found — Luxury Car Care",
+  description: "The page you are looking for doesn't exist. Head back to Luxury Car Care for car wash and detailing in Bidar.",
+  robots: { index: false, follow: false },
+};
 
 export default function NotFound() {
   return (

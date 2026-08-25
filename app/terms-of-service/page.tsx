@@ -82,7 +82,7 @@ export default function TermsOfServicePage() {
             className="mb-8 font-mono text-sm"
             style={{ color: "var(--color-muted)", fontFamily: "var(--font-mono)" }}
           >
-            Last updated: [insert launch date]
+            Last updated: August 2025
           </p>
 
           <p

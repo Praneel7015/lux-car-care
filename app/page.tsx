@@ -15,9 +15,9 @@ export const metadata: Metadata = {
     url: "https://car-care.sindhole.com",
     images: [
       {
-        url: "https://car-care.sindhole.com/og-image.jpg",
-        width: 1200,
-        height: 630,
+        url: "https://car-care.sindhole.com/hero-car-wash.jpg",
+        width: 1024,
+        height: 683,
         alt: "Luxury Car Care — Car Wash & Detailing in Bidar",
       },
     ],
@@ -41,9 +41,9 @@ const TESTIMONIALS = [
 
 const JSON_LD = {
   "@context": "https://schema.org",
-  "@type": "AutoWash",
+  "@type": "LocalBusiness",
   name: "Luxury Car Care",
-  image: "https://car-care.sindhole.com/og-image.jpg",
+  image: "https://car-care.sindhole.com/hero-car-wash.jpg",
   telephone: "+91-9972090190",
   email: "car-care@sindhole.com",
   address: {
@@ -52,12 +52,14 @@ const JSON_LD = {
     addressRegion: "Karnataka",
     addressCountry: "IN",
   },
-  openingHoursSpecification: {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-    opens: "06:00",
-    closes: "21:00",
-  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      opens: "06:00",
+      closes: "21:00",
+    },
+  ],
   url: "https://car-care.sindhole.com",
 };
 

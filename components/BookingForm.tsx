@@ -54,10 +54,10 @@ function Field({ label, id, required, children, error, hint }: FieldProps) {
 }
 
 const inputBase =
-  "w-full rounded-xl border px-4 py-3 text-sm transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FFB627] focus-visible:ring-offset-1";
+  "w-full rounded-xl border px-4 py-3 text-sm transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-gold)] focus-visible:ring-offset-1";
 
 const selectBase =
-  "w-full rounded-xl border px-4 py-3 text-sm transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FFB627] focus-visible:ring-offset-1 cursor-pointer";
+  "w-full rounded-xl border px-4 py-3 text-sm transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-gold)] focus-visible:ring-offset-1 cursor-pointer";
 
 const inputStyle = {
   borderColor: "var(--color-border)",
@@ -77,16 +77,23 @@ export function BookingForm() {
   const [state, setState] = useState<FormState>("idle");
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [touched, setTouched] = useState<Record<string, boolean>>({});
+  const [serviceValue, setServiceValue] = useState(preService);
   const formRef = useRef<HTMLFormElement>(null);
   const errorSummaryRef = useRef<HTMLDivElement>(null);
+
+  const getDateTimeMin = () => new Date().toISOString().slice(0, 16);
 
   const validate = (fd: FormData): Record<string, string> => {
     const errs: Record<string, string> = {};
     if (!fd.get("name")) errs.name = "Enter your full name.";
     const phone = String(fd.get("phone") ?? "");
-    if (!phone) errs.phone = "Enter your phone number.";
-    else if (!/^[+\d][\d\s\-()+]{7,}$/.test(phone))
-      errs.phone = "Enter a valid phone number, e.g. +91 98765 43210.";
+    if (!phone) {
+      errs.phone = "Enter your phone number.";
+    } else {
+      const digits = phone.replace(/[\s\-()+]/g, "");
+      if (!/^\+?\d{10,15}$/.test(digits))
+        errs.phone = "Enter a valid phone number, e.g. +91 98765 43210.";
+    }
     if (!fd.get("vehicle")) errs.vehicle = "Select your vehicle type.";
     if (!fd.get("service")) errs.service = "Select a service.";
     const dt = String(fd.get("preferred_datetime") ?? "");
@@ -106,9 +113,8 @@ export function BookingForm() {
   };
 
   const validateField = (name: string, value: string) => {
-    const fd = new FormData();
+    const fd = formRef.current ? new FormData(formRef.current) : new FormData();
     fd.set(name, value);
-    // Reuse full validation but only return the relevant field error
     const all = validate(fd);
     return all[name];
   };
@@ -129,12 +135,10 @@ export function BookingForm() {
     e.preventDefault();
     const fd = new FormData(e.currentTarget);
     const errs = validate(fd);
-    // Mark all fields touched on submit
     setTouched({ name: true, phone: true, vehicle: true, service: true, preferred_datetime: true });
 
     if (Object.keys(errs).length > 0) {
       setErrors(errs);
-      // Move focus to the error summary
       requestAnimationFrame(() => errorSummaryRef.current?.focus());
       return;
     }
@@ -150,6 +154,7 @@ export function BookingForm() {
       if (json.success) {
         setState("success");
         formRef.current?.reset();
+        setServiceValue("");
         setTouched({});
       } else {
         setState("error");
@@ -186,7 +191,7 @@ export function BookingForm() {
           <a href="tel:+919972090190" className="hover:underline">+91 99720 90190</a>
         </p>
         <button
-          onClick={() => setState("idle")}
+          onClick={() => { setState("idle"); setErrors({}); setTouched({}); }}
           className="mt-5 cursor-pointer rounded-xl px-5 py-2.5 text-sm font-semibold transition-opacity hover:opacity-90"
           style={{ backgroundColor: "var(--color-gold)", color: "var(--color-obsidian)", fontFamily: "var(--font-body)" }}
         >
@@ -304,7 +309,8 @@ export function BookingForm() {
             name="service"
             className={selectBase}
             style={{ ...inputStyle, borderColor: (touched.service && errors.service) ? "#d63638" : "var(--color-border)" }}
-            defaultValue={preService}
+            value={serviceValue}
+            onChange={(e) => setServiceValue(e.target.value)}
             aria-required="true"
             aria-invalid={!!(touched.service && errors.service)}
             aria-describedby={buildDescribedBy(touched.service && errors.service ? "service-error" : undefined)}
@@ -329,11 +335,12 @@ export function BookingForm() {
           type="datetime-local"
           name="preferred_datetime"
           autoComplete="off"
-          min={new Date().toISOString().slice(0, 16)}
+          min={getDateTimeMin()}
           className={inputBase}
           style={{ ...inputStyle, borderColor: (touched.preferred_datetime && errors.preferred_datetime) ? "#d63638" : "var(--color-border)" }}
           aria-invalid={!!(touched.preferred_datetime && errors.preferred_datetime)}
           aria-describedby={buildDescribedBy("preferred_datetime-hint", touched.preferred_datetime && errors.preferred_datetime ? "preferred_datetime-error" : undefined)}
+          onFocus={(e) => { e.target.min = getDateTimeMin(); }}
           onBlur={handleBlur}
         />
       </Field>

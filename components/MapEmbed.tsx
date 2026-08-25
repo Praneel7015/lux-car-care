@@ -1,6 +1,8 @@
 export function MapEmbed() {
   return (
     <div
+      role="region"
+      aria-label="Map showing Luxury Car Care location"
       className="w-full overflow-hidden rounded-2xl border"
       style={{
         aspectRatio: "16/9",
@@ -17,6 +19,7 @@ export function MapEmbed() {
         loading="lazy"
         referrerPolicy="strict-origin-when-cross-origin"
         title="Luxury Car Care location on Google Maps"
+        sandbox="allow-scripts allow-same-origin allow-fullscreen"
       />
     </div>
   );

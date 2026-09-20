@@ -6,11 +6,11 @@ import { OG_IMAGE } from "@/lib/media";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Privacy Policy for Luxury Car Care — how we collect, use, and protect your personal data under India's Digital Personal Data Protection Act, 2023.",
+    "Privacy Policy for Luxury Car Care - how we collect, use, and protect your personal data under India's Digital Personal Data Protection Act, 2023.",
   alternates: { canonical: `${BUSINESS.siteUrl}/privacy-policy` },
   robots: { index: false, follow: false },
   openGraph: {
-    title: "Privacy Policy — Luxury Car Care",
+    title: "Privacy Policy - Luxury Car Care",
     url: `${BUSINESS.siteUrl}/privacy-policy`,
     images: [{ url: OG_IMAGE.src, width: 1200, height: 800, alt: OG_IMAGE.alt }],
   },
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 const SECTIONS = [
   {
     heading: "1. Information We Collect",
-    body: "When you use our booking form or contact us, we may collect: your name, phone number, email address (if provided), vehicle type, and details of the service you're requesting. We do not knowingly collect payment card information through this website — payments are handled in person at our facility.",
+    body: "When you use our booking form or contact us, we may collect: your name, phone number, email address (if provided), vehicle type, and details of the service you're requesting. We do not knowingly collect payment card information through this website - payments are handled in person at our facility.",
   },
   {
     heading: "2. How We Use Your Information",
@@ -127,7 +127,7 @@ export default function PrivacyPolicyPage() {
             style={{ borderColor: "var(--color-border)", color: "var(--color-muted)" }}
           >
             This policy is written to align with India's Digital Personal Data Protection Act, 2023. It is
-            solid boilerplate for a small local business — have it reviewed by a lawyer before publishing,
+            solid boilerplate for a small local business - have it reviewed by a lawyer before publishing,
             especially as the DPDP Rules' phased obligations continue to take effect.
           </div>
 

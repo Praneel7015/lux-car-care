@@ -40,8 +40,8 @@ export const BUSINESS = {
   hours: {
     opens: "06:00",
     closes: "21:00",
-    display: "Every Day · 6:00 AM – 9:00 PM",
-    short: "6 AM – 9 PM",
+    display: "Every Day · 6:00 AM - 9:00 PM",
+    short: "6 AM - 9 PM",
   },
   priceRange: "₹₹",
   currenciesAccepted: "INR",

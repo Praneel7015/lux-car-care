@@ -20,7 +20,7 @@ export function Hero() {
     <section
       className="relative isolate overflow-hidden"
       style={{ backgroundColor: "var(--color-obsidian)", minHeight: "92svh" }}
-      aria-label="Hero — Your Car, Spotless in Minutes"
+      aria-label="Hero - Your Car, Spotless in Minutes"
     >
       {/* Full-bleed background photo */}
       <div className="absolute inset-0 -z-10">
@@ -36,7 +36,7 @@ export function Hero() {
           />
         </div>
 
-        {/* Deep gradient — text shadow zone */}
+        {/* Deep gradient - text shadow zone */}
         <div
           className="absolute inset-0"
           style={{
@@ -73,7 +73,7 @@ export function Hero() {
                   }}
                   aria-hidden="true"
                 />
-                {isOpen ? "Open now · 6 AM – 9 PM" : "Closed · Opens at 6 AM"}
+                {isOpen ? "Open now · 6 AM - 9 PM" : "Closed · Opens at 6 AM"}
               </span>
             )}
             <span
@@ -84,7 +84,7 @@ export function Hero() {
             </span>
           </div>
 
-          {/* Headline — Playfair Display, the aesthetic risk */}
+          {/* Headline - Playfair Display, the aesthetic risk */}
           <h1
             className="font-bold leading-[1.05] tracking-tight"
             style={{
@@ -111,7 +111,7 @@ export function Hero() {
             style={{ color: "rgba(250,248,245,0.65)" }}
           >
             Professional car wash &amp; detailing in Bidar.
-            Walk in or book ahead — every day, 6 AM to 9 PM.
+            Walk in or book ahead - every day, 6 AM to 9 PM.
           </p>
 
           {/* CTAs */}

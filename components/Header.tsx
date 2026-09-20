@@ -70,7 +70,7 @@ export function Header() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-16">
           <Link
             href="/"
-            aria-label="Luxury Car Care — Home"
+            aria-label="Luxury Car Care - Home"
             onClick={() => setOpen(false)}
             className="shrink-0"
           >
@@ -155,7 +155,7 @@ export function Header() {
         </div>
       </header>
 
-      {/* Mobile drawer — rendered OUTSIDE header so it never pushes page content */}
+      {/* Mobile drawer - rendered OUTSIDE header so it never pushes page content */}
       <div
         id="mobile-nav"
         className="fixed left-0 right-0 z-40 md:hidden"
@@ -176,7 +176,7 @@ export function Header() {
           aria-hidden="true"
         />
 
-        {/* Panel — slides down from top */}
+        {/* Panel - slides down from top */}
         <nav
           ref={drawerRef}
           className="relative border-b px-5 pb-6 pt-3 transition-all duration-200 ease-out"

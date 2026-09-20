@@ -4,7 +4,7 @@ import Link from "next/link";
 export function PriceTable() {
   return (
     <div className="w-full">
-      {/* Scroll hint — only visible on small screens */}
+      {/* Scroll hint - only visible on small screens */}
       <p
         className="mb-2 flex items-center gap-1 text-xs sm:hidden"
         style={{ color: "var(--color-muted)" }}
@@ -74,7 +74,7 @@ export function PriceTable() {
                   </td>
 
                   {service.pricing === "flat" ? (
-                    /* Flat-price services (e.g. bike wash) — span all vehicle columns */
+                    /* Flat-price services (e.g. bike wash) - span all vehicle columns */
                     <td
                       colSpan={VEHICLE_TYPES.length}
                       className="px-4 py-4 text-center font-mono font-medium"
@@ -102,7 +102,7 @@ export function PriceTable() {
                         {service.pricing === "by-quote"
                           ? v.value === "hatchback-sedan"
                             ? "By quote"
-                            : "—"
+                            : "-"
                           : formatPrice(service, v.value)}
                       </td>
                     ))

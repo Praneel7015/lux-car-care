@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "Full pricing for car wash and detailing at Luxury Car Care in Bidar. Express wash from ₹199, full detailing, ceramic coating for hatchback, sedan, and SUV near BVB College Road.",
   alternates: { canonical: `${BUSINESS.siteUrl}/services` },
   openGraph: {
-    title: "Services & Pricing — Luxury Car Care",
+    title: "Services & Pricing - Luxury Car Care",
     description: "Car wash and detailing prices for hatchback, sedan, and SUV in Bidar, Karnataka.",
     url: `${BUSINESS.siteUrl}/services`,
     images: [{ url: MEDIA.detailingHand.src, width: 1200, height: 800, alt: MEDIA.detailingHand.alt }],
@@ -39,7 +39,7 @@ export default function ServicesPage() {
               </h1>
               <p className="mt-4 max-w-xl text-base" style={{ color: "var(--color-stone)" }}>
                 Clear rates, no surprises at pickup. Choose the service that fits
-                your car and your schedule — then see the full step-by-step process for each package.
+                your car and your schedule - then see the full step-by-step process for each package.
               </p>
             </div>
             <div
@@ -92,7 +92,7 @@ export default function ServicesPage() {
             Package procedures
           </h2>
           <p className="mb-8 max-w-xl text-sm" style={{ color: "var(--color-stone)" }}>
-            What happens during each wash — inclusions, timing, and steps.
+            What happens during each wash - inclusions, timing, and steps.
           </p>
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {SERVICES.map((service) => {

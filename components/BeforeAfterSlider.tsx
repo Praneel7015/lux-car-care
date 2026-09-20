@@ -20,7 +20,7 @@ export function BeforeAfterSlider({
       className="rounded-2xl border"
       style={{
         borderColor: "var(--color-border)",
-        /* No overflow-hidden — it clips pointer events on the handle in some mobile browsers */
+        /* No overflow-hidden - it clips pointer events on the handle in some mobile browsers */
       }}
     >
       <ReactCompareSlider
@@ -54,7 +54,7 @@ export function BeforeAfterSlider({
               style={{ backgroundColor: "rgba(255,255,255,0.6)" }}
               aria-hidden="true"
             />
-            {/* Drag knob — larger touch target on mobile */}
+            {/* Drag knob - larger touch target on mobile */}
             <div
               className="relative flex size-12 items-center justify-center rounded-full shadow-xl"
               style={{

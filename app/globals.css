@@ -2,7 +2,7 @@
 
 /* ── Design Tokens ─────────────────────────────────────────── */
 @theme {
-  /* Colors — Light Ivory + Deep Gold */
+  /* Colors - Light Ivory + Deep Gold */
   --color-obsidian:   #0F0E0D;   /* header / footer / hero bg */
   --color-mahogany:   #1C1917;   /* primary text, dark accents */
   --color-stone:      #5C5751;   /* secondary text on light */
@@ -41,7 +41,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Prevent 300ms tap delay — but NOT on drag-interactive widgets */
+/* Prevent 300ms tap delay - but NOT on drag-interactive widgets */
 a, button, [role="button"], select, input, textarea, label {
   touch-action: manipulation;
 }

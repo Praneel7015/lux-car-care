@@ -6,12 +6,12 @@ import { BUSINESS } from "@/lib/business";
 import { OG_IMAGE } from "@/lib/media";
 
 export const metadata: Metadata = {
-  title: "Car Care Blog — Tips for Bidar Drivers",
+  title: "Car Care Blog - Tips for Bidar Drivers",
   description:
-    "Practical car wash and detailing guides for Bidar — wash frequency, express vs detailing, ceramic coating, and what a professional wash includes.",
+    "Practical car wash and detailing guides for Bidar - wash frequency, express vs detailing, ceramic coating, and what a professional wash includes.",
   alternates: { canonical: `${BUSINESS.siteUrl}/blog` },
   openGraph: {
-    title: "Car Care Blog — Luxury Car Care",
+    title: "Car Care Blog - Luxury Car Care",
     description: "Guides on washing, detailing, and protecting your car in Bidar.",
     url: `${BUSINESS.siteUrl}/blog`,
     images: [{ url: OG_IMAGE.src, width: 1200, height: 800, alt: OG_IMAGE.alt }],
@@ -30,7 +30,7 @@ export default function BlogIndexPage() {
             Car Care Blog
           </h1>
           <p className="mt-4 max-w-xl text-base" style={{ color: "var(--color-stone)" }}>
-            Straight answers for Bidar drivers — when to wash, what each package does, and how to keep paint looking sharp.
+            Straight answers for Bidar drivers - when to wash, what each package does, and how to keep paint looking sharp.
           </p>
         </div>
       </section>

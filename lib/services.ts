@@ -39,7 +39,7 @@ export const SERVICES: Service[] = [
       suv: "₹299",
     },
     fromPrice: "From ₹199",
-    duration: "15–25 minutes",
+    duration: "15-25 minutes",
     bestFor: "Daily drivers who need a quick refresh between deeper cleans.",
     includes: [
       "Exterior pre-rinse",
@@ -55,7 +55,7 @@ export const SERVICES: Service[] = [
     ],
     seoTitle: "Express Exterior Wash in Bidar",
     seoDescription:
-      "Fast exterior car wash in Bidar from ₹199. Pre-rinse, foam wash, rinse, and dry in about 15–25 minutes at Luxury Car Care.",
+      "Fast exterior car wash in Bidar from ₹199. Pre-rinse, foam wash, rinse, and dry in about 15-25 minutes at Luxury Car Care.",
   },
   {
     id: "exterior-interior",
@@ -66,7 +66,7 @@ export const SERVICES: Service[] = [
       suv: "₹349",
     },
     fromPrice: "From ₹299",
-    duration: "35–50 minutes",
+    duration: "35-50 minutes",
     bestFor: "Weekly upkeep when cabin dust and exterior grime both need attention.",
     includes: [
       "Full exterior wash",
@@ -75,7 +75,7 @@ export const SERVICES: Service[] = [
       "Glass inside and out",
     ],
     steps: [
-      "Exterior wash follows our express process — foam, rinse, and dry.",
+      "Exterior wash follows our express process - foam, rinse, and dry.",
       "Cabin floors, seats, and mats are vacuumed for dust and crumbs.",
       "Dashboard, console, and door panels are wiped with interior-safe cleaners.",
       "Interior and exterior glass are finished for a clear view.",
@@ -94,7 +94,7 @@ export const SERVICES: Service[] = [
     },
     fromPrice: "From ₹399",
     badge: "Popular",
-    duration: "45–60 minutes",
+    duration: "45-60 minutes",
     bestFor: "Monsoon dust, long highway trips, and anyone who wants a complete reset.",
     includes: [
       "Everything in Exterior + Interior",
@@ -115,13 +115,13 @@ export const SERVICES: Service[] = [
   {
     id: "full-detailing",
     name: "Full Detailing",
-    tagline: "Deep clean, shampoo, wax, tire shine — like new.",
+    tagline: "Deep clean, shampoo, wax, tire shine - like new.",
     pricing: {
       "hatchback-sedan": "₹1,299",
       suv: "₹1,999",
     },
     fromPrice: "From ₹1,299",
-    duration: "2–4 hours",
+    duration: "2-4 hours",
     bestFor: "Deep refreshes, special occasions, or cars that have gone months without care.",
     includes: [
       "Deep exterior wash",
@@ -172,7 +172,7 @@ export const SERVICES: Service[] = [
     flatPrice: "₹64",
     fromPrice: "₹64",
     vehicleCategory: "bike",
-    duration: "10–15 minutes",
+    duration: "10-15 minutes",
     bestFor: "Daily scooters and bikes that need a fast exterior clean.",
     includes: [
       "Exterior rinse",
@@ -209,7 +209,7 @@ export function getServiceById(id: string): Service | undefined {
 
 export function formatPrice(service: Service, vehicle: VehicleType): string {
   if (service.pricing === "by-quote") return "By quote";
-  if (service.pricing === "flat") return service.flatPrice ?? "—";
+  if (service.pricing === "flat") return service.flatPrice ?? "-";
   return service.pricing[vehicle];
 }
 

@@ -5,11 +5,11 @@ import { BUSINESS } from "@/lib/business";
 import { MEDIA } from "@/lib/media";
 
 export const metadata: Metadata = {
-  title: "About Luxury Car Care — Our Story & Values",
-  description: `Learn about Luxury Car Care in Bidar — our story, values, and commitment to quality car washing and detailing near ${BUSINESS.streetAddress}.`,
+  title: "About Luxury Car Care - Our Story & Values",
+  description: `Learn about Luxury Car Care in Bidar - our story, values, and commitment to quality car washing and detailing near ${BUSINESS.streetAddress}.`,
   alternates: { canonical: `${BUSINESS.siteUrl}/about` },
   openGraph: {
-    title: "About — Luxury Car Care",
+    title: "About - Luxury Car Care",
     description: "A local Bidar business committed to clean cars, fair pricing, and friendly service.",
     url: `${BUSINESS.siteUrl}/about`,
     images: [{ url: MEDIA.foamSuv.src, width: 1200, height: 800, alt: MEDIA.foamSuv.alt }],
@@ -24,9 +24,9 @@ const VALUES = [
 ];
 
 const HOURS = [
-  { day: "Monday – Friday", hours: "6:00 AM – 9:00 PM" },
-  { day: "Saturday", hours: "6:00 AM – 9:00 PM" },
-  { day: "Sunday", hours: "6:00 AM – 9:00 PM" },
+  { day: "Monday - Friday", hours: "6:00 AM - 9:00 PM" },
+  { day: "Saturday", hours: "6:00 AM - 9:00 PM" },
+  { day: "Sunday", hours: "6:00 AM - 9:00 PM" },
 ];
 
 export default function AboutPage() {
@@ -46,7 +46,7 @@ export default function AboutPage() {
             About Us
           </h1>
           <p className="mt-4 max-w-xl text-base" style={{ color: "var(--color-stone)" }}>
-            A Bidar business built on one simple idea — your car deserves to be clean, and you deserve fair prices.
+            A Bidar business built on one simple idea - your car deserves to be clean, and you deserve fair prices.
           </p>
         </div>
       </section>
@@ -71,7 +71,7 @@ export default function AboutPage() {
                   Luxury Car Care was founded in Bidar with a straightforward mission: deliver a proper car wash at a fair price, with no gimmicks and no waiting around. We noticed that most car owners in Bidar either did it themselves or settled for a rushed wash that left water marks and half-cleaned interiors.
                 </p>
                 <p>
-                  We set out to change that. From the first day, we trained our team to follow a consistent 12-step process on every vehicle — exterior pre-rinse, foam cannon, hand-wash, wheel detailing, rinse, hand-dry, interior vacuum, dashboard wipe, glass cleaning, tyre dressing, and a final inspection.
+                  We set out to change that. From the first day, we trained our team to follow a consistent 12-step process on every vehicle - exterior pre-rinse, foam cannon, hand-wash, wheel detailing, rinse, hand-dry, interior vacuum, dashboard wipe, glass cleaning, tyre dressing, and a final inspection.
                 </p>
                 <p>
                   Today we serve hundreds of cars every month. Whether it's a quick express wash before work or a full interior-exterior detail over the weekend, we treat every car the same.

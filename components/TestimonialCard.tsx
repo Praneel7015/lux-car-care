@@ -30,7 +30,7 @@ export function TestimonialCard({ quote, author }: TestimonialCardProps) {
         className="mt-4 font-mono text-xs font-medium"
         style={{ color: "var(--color-muted)", fontFamily: "var(--font-mono)" }}
       >
-        — {author}
+        - {author}
       </figcaption>
     </figure>
   );

@@ -6,11 +6,11 @@ import { OG_IMAGE } from "@/lib/media";
 export const metadata: Metadata = {
   title: "Terms of Service",
   description:
-    "Terms of Service for Luxury Car Care — governing your use of our website and car wash services in Bidar, Karnataka.",
+    "Terms of Service for Luxury Car Care - governing your use of our website and car wash services in Bidar, Karnataka.",
   alternates: { canonical: `${BUSINESS.siteUrl}/terms-of-service` },
   robots: { index: false, follow: false },
   openGraph: {
-    title: "Terms of Service — Luxury Car Care",
+    title: "Terms of Service - Luxury Car Care",
     url: `${BUSINESS.siteUrl}/terms-of-service`,
     images: [{ url: OG_IMAGE.src, width: 1200, height: 800, alt: OG_IMAGE.alt }],
   },
@@ -27,7 +27,7 @@ const SECTIONS = [
   },
   {
     heading: "3. Vehicle Condition and Liability",
-    body: "Please remove valuables and personal belongings from your vehicle before service — we are not responsible for items left inside. We take reasonable care with every vehicle; however, we are not liable for pre-existing damage, wear, or mechanical issues unrelated to the service performed. Any damage you believe occurred during our service should be reported to our staff before leaving the premises.",
+    body: "Please remove valuables and personal belongings from your vehicle before service - we are not responsible for items left inside. We take reasonable care with every vehicle; however, we are not liable for pre-existing damage, wear, or mechanical issues unrelated to the service performed. Any damage you believe occurred during our service should be reported to our staff before leaving the premises.",
   },
   {
     heading: "4. Payment",
@@ -39,7 +39,7 @@ const SECTIONS = [
   },
   {
     heading: "6. Website Use",
-    body: "You agree to use this website only for lawful purposes and not to submit false information through our booking form. All content on this website — text, images, and design — belongs to Luxury Car Care or its licensors and may not be copied or reused without permission.",
+    body: "You agree to use this website only for lawful purposes and not to submit false information through our booking form. All content on this website - text, images, and design - belongs to Luxury Car Care or its licensors and may not be copied or reused without permission.",
   },
   {
     heading: "7. Limitation of Liability",

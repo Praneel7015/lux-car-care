@@ -10,14 +10,14 @@ import { HOME_STRIP, OG_IMAGE } from "@/lib/media";
 import { BLOG_POSTS } from "@/content/blog/posts";
 
 export const metadata: Metadata = {
-  title: "Luxury Car Care — Car Wash & Detailing in Bidar",
+  title: "Luxury Car Care - Car Wash & Detailing in Bidar",
   description:
     "Car wash and detailing in Bidar, Karnataka. Express wash from ₹199. Near Bajaj Showroom, opp. BVB College Road. Open 6 AM to 9 PM every day. Walk-ins welcome.",
   alternates: {
     canonical: BUSINESS.siteUrl,
   },
   openGraph: {
-    title: "Luxury Car Care — Car Wash & Detailing in Bidar",
+    title: "Luxury Car Care - Car Wash & Detailing in Bidar",
     description:
       "Quick, affordable car wash and detailing in Bidar. Open 6 AM to 9 PM every day near BVB College Road.",
     url: BUSINESS.siteUrl,
@@ -220,7 +220,7 @@ export default function Home() {
               style={{ backgroundColor: "var(--color-border)" }}
             >
               {[
-                { stat: "15h", label: "Open every day", sub: "6 AM – 9 PM" },
+                { stat: "15h", label: "Open every day", sub: "6 AM - 9 PM" },
                 { stat: "₹199*", label: "Starts from", sub: "Express wash", footnote: "* Hatchback & sedan rate. SUV rates higher." },
                 { stat: "6", label: "Services", sub: "Express to ceramic" },
                 { stat: "365", label: "Days a year", sub: "No days off" },
@@ -418,7 +418,7 @@ export default function Home() {
                 Ready for a cleaner car?
               </h2>
               <p className="mt-3 text-base" style={{ color: "rgba(250,248,245,0.55)" }}>
-                Walk in any time — or book ahead to pick your slot.
+                Walk in any time - or book ahead to pick your slot.
               </p>
             </div>
 

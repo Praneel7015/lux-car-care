@@ -105,7 +105,7 @@ export function BookingForm() {
       } else {
         const h = selected.getHours() + selected.getMinutes() / 60;
         if (h < 6 || h >= 21) {
-          errs.preferred_datetime = "We're open 6 AM – 9 PM. Please pick a time within those hours.";
+          errs.preferred_datetime = "We're open 6 AM - 9 PM. Please pick a time within those hours.";
         }
       }
     }
@@ -182,7 +182,7 @@ export function BookingForm() {
           </svg>
         </div>
         <h3 className="text-lg font-bold" style={{ color: "var(--color-mahogany)", fontFamily: "var(--font-body)" }}>
-          You're all set — we'll be in touch shortly
+          You're all set - we'll be in touch shortly
         </h3>
         <p className="mt-2 text-sm" style={{ color: "var(--color-stone)" }}>
           Your request is with us. Expect a confirmation call or WhatsApp message soon.
@@ -207,11 +207,11 @@ export function BookingForm() {
     <form ref={formRef} onSubmit={handleSubmit} noValidate className="flex flex-col gap-5">
       {/* Web3Forms hidden fields */}
       <input type="hidden" name="access_key" value={process.env.NEXT_PUBLIC_WEB3FORMS_KEY ?? ""} />
-      <input type="hidden" name="subject" value="New Car Wash Booking — Luxury Car Care" />
+      <input type="hidden" name="subject" value="New Car Wash Booking - Luxury Car Care" />
       <input type="hidden" name="from_name" value="Luxury Car Care Website" />
       <input type="checkbox" name="botcheck" className="hidden" aria-hidden="true" tabIndex={-1} />
 
-      {/* Error summary — focused after failed submit */}
+      {/* Error summary - focused after failed submit */}
       {state === "error" && (
         <div
           className="rounded-xl border px-4 py-3 text-sm"
@@ -328,7 +328,7 @@ export function BookingForm() {
         label="Preferred Date & Time"
         id="preferred_datetime"
         error={touched.preferred_datetime ? errors.preferred_datetime : undefined}
-        hint="Open every day, 6:00 AM – 9:00 PM"
+        hint="Open every day, 6:00 AM - 9:00 PM"
       >
         <input
           id="preferred_datetime"

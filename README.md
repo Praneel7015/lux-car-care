@@ -1,4 +1,4 @@
-# Luxury Car Care — Website
+# Luxury Car Care - Website
 
 Production website for **Luxury Car Care**, a car wash and detailing shop in Bidar, Karnataka, India.
 
@@ -11,13 +11,13 @@ Production website for **Luxury Car Care**, a car wash and detailing shop in Bid
 - **Next.js 16** (App Router, Turbopack)
 - **TypeScript**
 - **Tailwind CSS v4**
-- **react-compare-slider** — before/after gallery drag slider
-- **Web3Forms** — serverless booking form delivery (free tier)
+- **react-compare-slider** - before/after gallery drag slider
+- **Web3Forms** - serverless booking form delivery (free tier)
 
 Fonts loaded via `next/font/google` (self-hosted at build time, zero runtime requests):
-- Space Grotesk — headlines/display
-- Public Sans — body text
-- IBM Plex Mono — prices, hours, labels
+- Space Grotesk - headlines/display
+- Public Sans - body text
+- IBM Plex Mono - prices, hours, labels
 
 ---
 
@@ -32,11 +32,11 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ---
 
-## Before You Launch — Required Steps
+## Before You Launch - Required Steps
 
 ### 1. Web3Forms Access Key (REQUIRED for the booking form to work)
 
-1. Sign up at [web3forms.com](https://web3forms.com) — free, no credit card.
+1. Sign up at [web3forms.com](https://web3forms.com) - free, no credit card.
 2. Create a new form and copy the access key.
 3. In `components/BookingForm.tsx`, replace `YOUR_WEB3FORMS_ACCESS_KEY`:
 
@@ -52,13 +52,13 @@ In `app/privacy-policy/page.tsx` and `app/terms-of-service/page.tsx`, replace `[
 
 See `plan.md` Section 8 (Open Items) for the full checklist. Key items:
 
-- **Pricing** — `lib/services.ts` has sample prices. Replace with real rates before launch.
-- **Testimonials** — `app/page.tsx` has illustrative quotes. Replace with real customer reviews (and remove the "illustrative" disclaimer).
-- **Gallery photos** — Currently using Unsplash stock. Replace with real facility/vehicle photos.
-- **About page** — Add your founding year, team size, equipment details.
-- **GSTIN** — If applicable, add to the legal pages under Section 10 of each.
-- **Street address** — Add to the JSON-LD schema on the homepage and the legal pages once confirmed.
-- **Payment methods** — Note accepted methods (cash, UPI, etc.) on `/services`.
+- **Pricing** - `lib/services.ts` has sample prices. Replace with real rates before launch.
+- **Testimonials** - `app/page.tsx` has illustrative quotes. Replace with real customer reviews (and remove the "illustrative" disclaimer).
+- **Gallery photos** - Currently using Unsplash stock. Replace with real facility/vehicle photos.
+- **About page** - Add your founding year, team size, equipment details.
+- **GSTIN** - If applicable, add to the legal pages under Section 10 of each.
+- **Street address** - Add to the JSON-LD schema on the homepage and the legal pages once confirmed.
+- **Payment methods** - Note accepted methods (cash, UPI, etc.) on `/services`.
 
 ---
 
@@ -69,7 +69,7 @@ See `plan.md` Section 8 (Open Items) for the full checklist. Key items:
 3. In the Vercel dashboard → Settings → Domains, add `car-care.sindhole.com`.
 4. Vercel will give you a CNAME target (e.g. `cname.vercel-dns.com`).
 
-### Cloudflare DNS — IMPORTANT
+### Cloudflare DNS - IMPORTANT
 
 In your Cloudflare DNS dashboard for `sindhole.com`:
 

@@ -74,7 +74,7 @@ export function Footer() {
               Every Day
             </p>
             <p className="font-mono text-sm" style={{ color: "var(--color-gold)", fontFamily: "var(--font-mono)" }}>
-              6:00 AM – 9:00 PM
+              6:00 AM - 9:00 PM
             </p>
 
             {isOpen !== null && (

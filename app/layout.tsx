@@ -31,7 +31,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(BUSINESS.siteUrl),
   title: {
-    default: "Luxury Car Care — Car Wash & Detailing in Bidar",
+    default: "Luxury Car Care - Car Wash & Detailing in Bidar",
     template: "%s | Luxury Car Care",
   },
   description:
@@ -70,13 +70,13 @@ export const metadata: Metadata = {
         url: OG_IMAGE.src,
         width: 1200,
         height: 800,
-        alt: "Luxury Car Care — Car Wash & Detailing in Bidar",
+        alt: "Luxury Car Care - Car Wash & Detailing in Bidar",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Luxury Car Care — Car Wash & Detailing in Bidar",
+    title: "Luxury Car Care - Car Wash & Detailing in Bidar",
     description: "Quick, affordable car wash and detailing in Bidar, Karnataka. Open 6 AM to 9 PM every day.",
     images: [OG_IMAGE.src],
   },

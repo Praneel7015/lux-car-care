@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: `Book a car wash or detailing at Luxury Car Care in Bidar. ${BUSINESS.streetAddress}. Call or WhatsApp ${BUSINESS.phoneDisplay}. Open 6 AM to 9 PM every day.`,
   alternates: { canonical: `${BUSINESS.siteUrl}/contact` },
   openGraph: {
-    title: "Contact & Booking — Luxury Car Care",
+    title: "Contact & Booking - Luxury Car Care",
     description: `Book a car wash in Bidar near BVB College Road. Call ${BUSINESS.phoneDisplay}.`,
     url: `${BUSINESS.siteUrl}/contact`,
     images: [{ url: OG_IMAGE.src, width: 1200, height: 800, alt: OG_IMAGE.alt }],
@@ -42,7 +42,7 @@ export default function ContactPage() {
             Contact & Booking
           </h1>
           <p className="mt-4 max-w-xl text-base" style={{ color: "var(--color-stone)" }}>
-            Walk in any time — or use the form below to book ahead and pick
+            Walk in any time - or use the form below to book ahead and pick
             your slot. We&apos;ll confirm via WhatsApp or phone.
           </p>
 
@@ -178,7 +178,7 @@ export default function ContactPage() {
                   Not satisfied with your wash?
                 </h2>
                 <p className="mt-2 text-sm leading-relaxed" style={{ color: "var(--color-stone)" }}>
-                  We take every complaint seriously. Reach us directly — we&apos;ll make it right.
+                  We take every complaint seriously. Reach us directly - we&apos;ll make it right.
                 </p>
                 <p
                   className="mt-3 font-mono text-xs"

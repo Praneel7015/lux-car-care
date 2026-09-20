@@ -5,12 +5,12 @@ import { BEFORE_AFTER_PAIRS, GALLERY_IMAGES, OG_IMAGE } from "@/lib/media";
 import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Gallery — Before & After Car Wash Photos",
+  title: "Gallery - Before & After Car Wash Photos",
   description:
-    "Car wash and detailing photo gallery — foam washes, hand polishing, and before-and-after results. See the standard of work at Luxury Car Care in Bidar.",
+    "Car wash and detailing photo gallery - foam washes, hand polishing, and before-and-after results. See the standard of work at Luxury Car Care in Bidar.",
   alternates: { canonical: `${BUSINESS.siteUrl}/gallery` },
   openGraph: {
-    title: "Gallery — Luxury Car Care",
+    title: "Gallery - Luxury Car Care",
     description: "Before and after car wash photos and professional detailing imagery.",
     url: `${BUSINESS.siteUrl}/gallery`,
     images: [{ url: OG_IMAGE.src, width: 1200, height: 800, alt: OG_IMAGE.alt }],
@@ -34,7 +34,7 @@ export default function GalleryPage() {
             Gallery
           </h1>
           <p className="mt-4 max-w-xl text-base" style={{ color: "var(--color-stone)" }}>
-            Professional wash and detailing imagery — foam, rinse, polish, and the before-and-after difference.
+            Professional wash and detailing imagery - foam, rinse, polish, and the before-and-after difference.
           </p>
         </div>
       </section>

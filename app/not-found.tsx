@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Page Not Found — Luxury Car Care",
+  title: "Page Not Found - Luxury Car Care",
   description: "The page you are looking for doesn't exist. Head back to Luxury Car Care for car wash and detailing in Bidar.",
   robots: { index: false, follow: false },
 };
@@ -38,7 +38,7 @@ export default function NotFound() {
       </h1>
 
       <p className="mt-4 max-w-md text-base" style={{ color: "rgba(28,25,23,0.6)" }}>
-        The page you&apos;re looking for doesn&apos;t exist — but your car wash is still
+        The page you&apos;re looking for doesn&apos;t exist - but your car wash is still
         open{" "}
         <span className="font-mono font-medium" style={{ color: "var(--color-mahogany)", fontFamily: "var(--font-mono)" }}>
           6 AM to 9 PM

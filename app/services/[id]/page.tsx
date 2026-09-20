@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: service.seoDescription,
     alternates: { canonical: `${BUSINESS.siteUrl}/services/${service.id}` },
     openGraph: {
-      title: `${service.name} — Luxury Car Care`,
+      title: `${service.name} - Luxury Car Care`,
       description: service.seoDescription,
       url: `${BUSINESS.siteUrl}/services/${service.id}`,
       images: [{ url: image.src, width: 1200, height: 800, alt: image.alt }],

@@ -3,11 +3,13 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
+import { BUSINESS } from "@/lib/business";
 import { Logo } from "./Logo";
 
 const NAV_LINKS = [
   { href: "/services", label: "Services" },
   { href: "/gallery", label: "Gallery" },
+  { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
@@ -96,11 +98,11 @@ export function Header() {
           {/* Desktop right */}
           <div className="hidden items-center gap-4 md:flex">
             <a
-              href="tel:+917416238424"
+              href={`tel:${BUSINESS.phoneE164}`}
               className="font-mono text-sm font-medium tracking-tight transition-opacity hover:opacity-70"
               style={{ color: "rgba(250,248,245,0.45)", fontFamily: "var(--font-mono)" }}
             >
-              +91 74162 38424
+              {BUSINESS.phoneDisplay}
             </a>
             <Link
               href="/contact"
@@ -215,11 +217,11 @@ export function Header() {
 
           <div className="mt-4 border-t pt-4" style={{ borderColor: "rgba(250,248,245,0.08)" }}>
             <a
-              href="tel:+917416238424"
+              href={`tel:${BUSINESS.phoneE164}`}
               className="block font-mono text-sm transition-opacity hover:opacity-70"
               style={{ color: "rgba(250,248,245,0.4)", fontFamily: "var(--font-mono)" }}
             >
-              +91 74162 38424
+              {BUSINESS.phoneDisplay}
             </a>
           </div>
 

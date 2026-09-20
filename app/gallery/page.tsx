@@ -1,38 +1,21 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
+import { BEFORE_AFTER_PAIRS, GALLERY_IMAGES, OG_IMAGE } from "@/lib/media";
+import { BUSINESS } from "@/lib/business";
 
 export const metadata: Metadata = {
   title: "Gallery — Before & After Car Wash Photos",
-  description: "Before and after car wash and detailing photos from Luxury Car Care in Bidar, Karnataka. See what we can do for your car.",
-  alternates: { canonical: "https://lux-car-care.sindhole.com/gallery" },
+  description:
+    "Car wash and detailing photo gallery — foam washes, hand polishing, and before-and-after results. See the standard of work at Luxury Car Care in Bidar.",
+  alternates: { canonical: `${BUSINESS.siteUrl}/gallery` },
   openGraph: {
     title: "Gallery — Luxury Car Care",
-    description: "Before and after car wash photos from Luxury Car Care in Bidar.",
-    url: "https://lux-car-care.sindhole.com/gallery",
-    images: [{ url: "https://lux-car-care.sindhole.com/suv-foam-wash.jpg", width: 1024, height: 683, alt: "Worker applying foam wash to an SUV at Luxury Car Care Bidar" }],
+    description: "Before and after car wash photos and professional detailing imagery.",
+    url: `${BUSINESS.siteUrl}/gallery`,
+    images: [{ url: OG_IMAGE.src, width: 1200, height: 800, alt: OG_IMAGE.alt }],
   },
 };
-
-const GALLERY_IMAGES = [
-  { src: "/sponge-headlight.jpg", alt: "Hand-washing a headlight with foam and sponge — close-up detailing at Luxury Car Care" },
-  { src: "/suv-foam-wash.jpg", alt: "Worker applying foam wash to an SUV at Luxury Car Care Bidar" },
-  { src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80", alt: "Water beading on a freshly washed car panel" },
-  { src: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&q=80", alt: "Microfiber cloth wiping a car dashboard" },
-  { src: "https://images.unsplash.com/photo-1614026480418-bd11fdb9fa06?w=900&q=80", alt: "Foam suds covering the hood of a car during wash" },
-  { src: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=900&q=80", alt: "Clean alloy wheel after detailing" },
-];
-
-const BEFORE_AFTER_PAIRS = [
-  {
-    before: { src: "https://images.unsplash.com/photo-1563720360172-67b8f3dce741?w=800&q=80", alt: "Dusty, dirty car exterior before washing" },
-    after: { src: "/hero-car-wash.jpg", alt: "Car being precision-washed at Luxury Car Care — sparkling result" },
-  },
-  {
-    before: { src: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&q=80", alt: "Dirty car interior before detailing" },
-    after: { src: "/sponge-headlight.jpg", alt: "Professional foam-and-sponge detailing — after treatment" },
-  },
-];
 
 export default function GalleryPage() {
   return (
@@ -51,7 +34,7 @@ export default function GalleryPage() {
             Gallery
           </h1>
           <p className="mt-4 max-w-xl text-base" style={{ color: "var(--color-stone)" }}>
-            A look at the results we deliver — facility shots and the before-and-after difference.
+            Professional wash and detailing imagery — foam, rinse, polish, and the before-and-after difference.
           </p>
         </div>
       </section>
@@ -67,7 +50,7 @@ export default function GalleryPage() {
             className="mb-8 text-2xl font-bold"
             style={{ color: "var(--color-mahogany)", fontFamily: "var(--font-display)" }}
           >
-            Our Facility
+            Wash &amp; Detailing
           </h2>
 
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -84,8 +67,8 @@ export default function GalleryPage() {
             ))}
           </div>
 
-          <p className="mt-5 text-xs italic" style={{ color: "var(--color-muted)" }}>
-            Real photos from our Bidar facility coming soon.
+          <p className="mt-5 text-xs" style={{ color: "var(--color-muted)" }}>
+            Stock photography for illustration. Bidar facility photos will replace these as we add them.
           </p>
         </div>
       </section>
@@ -101,21 +84,28 @@ export default function GalleryPage() {
             className="mb-3 text-2xl font-bold"
             style={{ color: "var(--color-mahogany)", fontFamily: "var(--font-display)" }}
           >
-            Before & After
+            Before &amp; After
           </h2>
           <p className="mb-8 text-sm" style={{ color: "var(--color-stone)" }}>
             Drag the slider to reveal the difference.
           </p>
 
           <div className="grid gap-6 md:grid-cols-2">
-            {BEFORE_AFTER_PAIRS.map((pair, i) => (
-              <BeforeAfterSlider
-                key={i}
-                beforeSrc={pair.before.src}
-                afterSrc={pair.after.src}
-                beforeAlt={pair.before.alt}
-                afterAlt={pair.after.alt}
-              />
+            {BEFORE_AFTER_PAIRS.map((pair) => (
+              <div key={pair.label}>
+                <BeforeAfterSlider
+                  beforeSrc={pair.before.src}
+                  afterSrc={pair.after.src}
+                  beforeAlt={pair.before.alt}
+                  afterAlt={pair.after.alt}
+                />
+                <p
+                  className="mt-2 font-mono text-xs uppercase tracking-widest"
+                  style={{ color: "var(--color-muted)", fontFamily: "var(--font-mono)" }}
+                >
+                  {pair.label}
+                </p>
+              </div>
             ))}
           </div>
         </div>

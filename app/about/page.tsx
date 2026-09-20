@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import { BUSINESS } from "@/lib/business";
+import { MEDIA } from "@/lib/media";
 
 export const metadata: Metadata = {
   title: "About Luxury Car Care — Our Story & Values",
-  description: "Learn about Luxury Car Care in Bidar — our story, values, and commitment to quality car washing and detailing. Serving Bidar since day one.",
-  alternates: { canonical: "https://lux-car-care.sindhole.com/about" },
+  description: `Learn about Luxury Car Care in Bidar — our story, values, and commitment to quality car washing and detailing near ${BUSINESS.streetAddress}.`,
+  alternates: { canonical: `${BUSINESS.siteUrl}/about` },
   openGraph: {
     title: "About — Luxury Car Care",
     description: "A local Bidar business committed to clean cars, fair pricing, and friendly service.",
-    url: "https://lux-car-care.sindhole.com/about",
-    images: [{ url: "https://lux-car-care.sindhole.com/suv-foam-wash.jpg", width: 1024, height: 683, alt: "Worker foam-washing an SUV at Luxury Car Care Bidar" }],
+    url: `${BUSINESS.siteUrl}/about`,
+    images: [{ url: MEDIA.foamSuv.src, width: 1200, height: 800, alt: MEDIA.foamSuv.alt }],
   },
 };
 
@@ -78,8 +80,8 @@ export default function AboutPage() {
             </div>
             <div className="relative overflow-hidden rounded-2xl" style={{ aspectRatio: "4/3" }}>
               <Image
-                src="/suv-foam-wash.jpg"
-                alt="Worker foam-washing a car at Luxury Car Care in Bidar"
+                src={MEDIA.foamSuv.src}
+                alt={MEDIA.foamSuv.alt}
                 fill
                 priority
                 loading="eager"
@@ -172,7 +174,7 @@ export default function AboutPage() {
                 Get Directions & Book
               </Link>
               <a
-                href="https://wa.me/919972090190?text=Hi%2C%20I%27d%20like%20to%20book%20a%20car%20wash"
+                href={`https://wa.me/${BUSINESS.whatsappE164}?text=Hi%2C%20I%27d%20like%20to%20book%20a%20car%20wash`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 rounded-xl border px-6 py-3.5 text-base font-semibold transition-opacity duration-150 hover:opacity-70"

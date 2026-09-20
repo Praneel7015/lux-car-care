@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BUSINESS } from "@/lib/business";
+import { OG_IMAGE } from "@/lib/media";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
     "Privacy Policy for Luxury Car Care — how we collect, use, and protect your personal data under India's Digital Personal Data Protection Act, 2023.",
-  alternates: { canonical: "https://lux-car-care.sindhole.com/privacy-policy" },
+  alternates: { canonical: `${BUSINESS.siteUrl}/privacy-policy` },
   robots: { index: false, follow: false },
   openGraph: {
     title: "Privacy Policy — Luxury Car Care",
-    url: "https://lux-car-care.sindhole.com/privacy-policy",
-    images: [{ url: "https://lux-car-care.sindhole.com/hero-car-wash.jpg", width: 1024, height: 683, alt: "Luxury Car Care" }],
+    url: `${BUSINESS.siteUrl}/privacy-policy`,
+    images: [{ url: OG_IMAGE.src, width: 1200, height: 800, alt: OG_IMAGE.alt }],
   },
 };
 
@@ -57,7 +59,7 @@ const SECTIONS = [
   },
   {
     heading: "11. Grievance Officer / Contact",
-    body: `For any questions, requests, or complaints about this policy or your personal data, contact:\n\nLuxury Car Care\nBidar, Karnataka, India\nEmail: car-care@sindhole.com\nPhone/WhatsApp: +91 74162 38424`,
+    body: `For any questions, requests, or complaints about this policy or your personal data, contact:\n\nLuxury Car Care\n${BUSINESS.addressOneLine}\nEmail: ${BUSINESS.email}\nPhone/WhatsApp: ${BUSINESS.phoneDisplay}`,
   },
 ];
 

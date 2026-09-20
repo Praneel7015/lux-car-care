@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { BUSINESS } from "@/lib/business";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -6,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://lux-car-care.sindhole.com/sitemap.xml",
+    sitemap: `${BUSINESS.siteUrl}/sitemap.xml`,
   };
 }

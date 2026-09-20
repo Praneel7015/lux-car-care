@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useIsOpen } from "@/lib/useIsOpen";
+import { BUSINESS } from "@/lib/business";
 import { Logo } from "./Logo";
 
 const LINKS = {
@@ -9,6 +10,7 @@ const LINKS = {
     { href: "/", label: "Home" },
     { href: "/services", label: "Services & Pricing" },
     { href: "/gallery", label: "Gallery" },
+    { href: "/blog", label: "Blog" },
     { href: "/about", label: "About" },
     { href: "/contact", label: "Contact & Booking" },
   ],
@@ -33,8 +35,7 @@ export function Footer() {
               className="mt-4 text-sm leading-relaxed"
               style={{ color: "rgba(250,248,245,0.4)" }}
             >
-              Quick, affordable car wash and detailing in Bidar, Karnataka.
-              Walk-ins always welcome.
+              {BUSINESS.tagline} Walk-ins always welcome.
             </p>
           </div>
 
@@ -107,16 +108,16 @@ export function Footer() {
             <ul className="flex flex-col gap-2 text-sm">
               <li>
                 <a
-                  href="tel:+917416238424"
+                  href={`tel:${BUSINESS.phoneE164}`}
                   className="font-mono transition-opacity hover:opacity-70"
                   style={{ color: "rgba(250,248,245,0.5)", fontFamily: "var(--font-mono)" }}
                 >
-                  +91 74162 38424
+                  {BUSINESS.phoneDisplay}
                 </a>
               </li>
               <li>
                 <a
-                  href="https://wa.me/919972090190"
+                  href={`https://wa.me/${BUSINESS.whatsappE164}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="transition-opacity hover:opacity-70"
@@ -127,14 +128,26 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:car-care@sindhole.com"
+                  href={`mailto:${BUSINESS.email}`}
                   className="transition-opacity hover:opacity-70"
                   style={{ color: "rgba(250,248,245,0.5)" }}
                 >
-                  car-care@sindhole.com
+                  {BUSINESS.email}
                 </a>
               </li>
-              <li style={{ color: "rgba(250,248,245,0.3)" }}>Bidar, Karnataka, India</li>
+              <li>
+                <a
+                  href={BUSINESS.mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-opacity hover:opacity-70"
+                  style={{ color: "rgba(250,248,245,0.3)" }}
+                >
+                  {BUSINESS.streetAddress}
+                  <br />
+                  {BUSINESS.addressLocality}, {BUSINESS.addressRegion} {BUSINESS.postalCode}
+                </a>
+              </li>
             </ul>
           </div>
         </div>

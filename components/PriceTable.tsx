@@ -64,7 +64,9 @@ export function PriceTable() {
                       className="font-semibold"
                       style={{ color: "var(--color-mahogany)", fontFamily: "var(--font-body)" }}
                     >
-                      {service.name}
+                      <Link href={`/services/${service.id}`} className="hover:underline">
+                        {service.name}
+                      </Link>
                     </p>
                     <p className="mt-0.5 text-xs" style={{ color: "var(--color-muted)" }}>
                       {service.tagline}

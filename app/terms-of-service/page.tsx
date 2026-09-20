@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { BUSINESS } from "@/lib/business";
+import { OG_IMAGE } from "@/lib/media";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
   description:
     "Terms of Service for Luxury Car Care — governing your use of our website and car wash services in Bidar, Karnataka.",
-  alternates: { canonical: "https://lux-car-care.sindhole.com/terms-of-service" },
+  alternates: { canonical: `${BUSINESS.siteUrl}/terms-of-service` },
   robots: { index: false, follow: false },
   openGraph: {
     title: "Terms of Service — Luxury Car Care",
-    url: "https://lux-car-care.sindhole.com/terms-of-service",
-    images: [{ url: "https://lux-car-care.sindhole.com/hero-car-wash.jpg", width: 1024, height: 683, alt: "Luxury Car Care" }],
+    url: `${BUSINESS.siteUrl}/terms-of-service`,
+    images: [{ url: OG_IMAGE.src, width: 1200, height: 800, alt: OG_IMAGE.alt }],
   },
 };
 
@@ -53,7 +55,7 @@ const SECTIONS = [
   },
   {
     heading: "10. Contact",
-    body: "Luxury Car Care\nBidar, Karnataka, India\nEmail: car-care@sindhole.com\nPhone/WhatsApp: +91 74162 38424",
+    body: `Luxury Car Care\n${BUSINESS.addressOneLine}\nEmail: ${BUSINESS.email}\nPhone/WhatsApp: ${BUSINESS.phoneDisplay}`,
   },
 ];
 

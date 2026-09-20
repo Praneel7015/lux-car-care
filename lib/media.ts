@@ -24,9 +24,9 @@ export const MEDIA = {
     credit: "Pexels",
   },
   pressureWash: {
-    src: u("photo-1520340358512-46f4c5d5b1b4"),
+    src: p("6872149"),
     alt: "Pressure washer rinsing soap from a dark car",
-    credit: "Unsplash",
+    credit: "Pexels",
   },
   detailingHand: {
     src: u("photo-1619642751034-765dfdf7c58e"),

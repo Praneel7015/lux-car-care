@@ -16,12 +16,14 @@ const NAV_LINKS = [
 
 export function Header() {
   const pathname = usePathname();
+  // Reset drawer state with the route instead of updating it from an effect.
+  return <HeaderNavigation key={pathname} pathname={pathname} />;
+}
+
+function HeaderNavigation({ pathname }: { pathname: string }) {
   const [open, setOpen] = useState(false);
   const drawerRef = useRef<HTMLElement>(null);
   const hamburgerRef = useRef<HTMLButtonElement>(null);
-
-  // Close on route change
-  useEffect(() => { setOpen(false); }, [pathname]);
 
   // Close on Escape
   useEffect(() => {

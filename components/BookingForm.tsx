@@ -1,7 +1,7 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { SERVICES, VEHICLE_TYPES } from "@/lib/services";
 
 type FormState = "idle" | "loading" | "success" | "error";
@@ -182,7 +182,7 @@ export function BookingForm() {
           </svg>
         </div>
         <h3 className="text-lg font-bold" style={{ color: "var(--color-mahogany)", fontFamily: "var(--font-body)" }}>
-          You're all set - we'll be in touch shortly
+          You&apos;re all set - we&apos;ll be in touch shortly
         </h3>
         <p className="mt-2 text-sm" style={{ color: "var(--color-stone)" }}>
           Your request is with us. Expect a confirmation call or WhatsApp message soon.

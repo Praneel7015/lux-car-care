@@ -101,7 +101,7 @@ Set the record to **"DNS only" (grey cloud)**, not "Proxied" (orange). A proxied
 
 ```
 app/
-  layout.tsx              # Header, Footer, StickyMobileCTA, fonts
+  layout.tsx              # Header, Footer, FloatingContact, fonts
   page.tsx                # Home
   services/page.tsx
   gallery/page.tsx
@@ -113,7 +113,7 @@ app/
   sitemap.ts
   robots.ts
 components/
-  Header.tsx  Footer.tsx  Logo.tsx  StickyMobileCTA.tsx
+  Header.tsx  Footer.tsx  Logo.tsx  FloatingContact.tsx  BreadcrumbJsonLd.tsx
   Hero.tsx  ServiceCard.tsx  PriceTable.tsx
   TestimonialCard.tsx  BeforeAfterSlider.tsx  BookingForm.tsx  MapEmbed.tsx
 lib/

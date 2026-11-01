@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BUSINESS } from "@/lib/business";
 import { getServiceById, getServiceImage, SERVICES, formatPrice } from "@/lib/services";
+import { BreadcrumbJsonLd } from "@/components/BreadcrumbJsonLd";
 
 type Props = { params: Promise<{ id: string }> };
 
@@ -85,6 +86,7 @@ export default async function ServiceProcedurePage({ params }: Props) {
 
   return (
     <>
+      <BreadcrumbJsonLd items={[{ name: "Services & Pricing", path: "/services" }, { name: service.name, path: `/services/${service.id}` }]} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

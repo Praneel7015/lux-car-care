@@ -4,6 +4,7 @@ import Link from "next/link";
 import { BLOG_POSTS } from "@/content/blog/posts";
 import { BUSINESS } from "@/lib/business";
 import { OG_IMAGE } from "@/lib/media";
+import { BreadcrumbJsonLd } from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Car Care Blog - Tips for Bidar Drivers",
@@ -21,6 +22,7 @@ export const metadata: Metadata = {
 export default function BlogIndexPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[{ name: "Blog", path: "/blog" }]} />
       <section className="py-16" style={{ backgroundColor: "var(--color-surface)" }}>
         <div className="mx-auto max-w-7xl px-5 lg:px-16">
           <h1

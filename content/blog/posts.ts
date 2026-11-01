@@ -78,7 +78,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "diy-rinse-vs-professional-wash",
-    title: "DIY rinse vs a professional wash - what you miss at home",
+    title: "DIY rinse vs a professional wash: what you miss",
     description:
       "A hose at home feels free until swirl marks show up. See what a proper Bidar car wash adds beyond a quick DIY rinse.",
     date: "2026-03-25",

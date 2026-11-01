@@ -5,6 +5,7 @@ import { MapEmbed } from "@/components/MapEmbed";
 import { BUSINESS } from "@/lib/business";
 import { getLocalBusinessJsonLd } from "@/lib/schema";
 import { OG_IMAGE } from "@/lib/media";
+import { BreadcrumbJsonLd } from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Contact & Booking",
@@ -23,6 +24,7 @@ export default function ContactPage() {
 
   return (
     <>
+      <BreadcrumbJsonLd items={[{ name: "Contact", path: "/contact" }]} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

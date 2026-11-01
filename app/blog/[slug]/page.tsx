@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { BLOG_POSTS, getAllPostSlugs, getPostBySlug } from "@/content/blog/posts";
 import { BUSINESS } from "@/lib/business";
 import { getServiceById } from "@/lib/services";
+import { BreadcrumbJsonLd } from "@/components/BreadcrumbJsonLd";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -59,6 +60,7 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <>
+      <BreadcrumbJsonLd items={[{ name: "Blog", path: "/blog" }, { name: post.title, path: `/blog/${post.slug}` }]} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

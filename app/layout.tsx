@@ -3,7 +3,7 @@ import { Playfair_Display, Inter, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { StickyMobileCTA } from "@/components/StickyMobileCTA";
+import { FloatingContact } from "@/components/FloatingContact";
 import { BUSINESS } from "@/lib/business";
 import { OG_IMAGE } from "@/lib/media";
 
@@ -114,7 +114,7 @@ export default function RootLayout({
         <Header />
         <main id="main-content">{children}</main>
         <Footer />
-        <StickyMobileCTA />
+        <FloatingContact />
       </body>
     </html>
   );

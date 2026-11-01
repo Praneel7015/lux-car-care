@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { BUSINESS } from "@/lib/business";
 import { MEDIA } from "@/lib/media";
+import { BreadcrumbJsonLd } from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "About Luxury Car Care - Our Story & Values",
@@ -32,6 +33,7 @@ const HOURS = [
 export default function AboutPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[{ name: "About", path: "/about" }]} />
       <section
         className="py-16"
         style={{ backgroundColor: "var(--color-surface)" }}

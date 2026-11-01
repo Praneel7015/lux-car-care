@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
 import { OG_IMAGE } from "@/lib/media";
+import { BreadcrumbJsonLd } from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -66,6 +67,7 @@ const SECTIONS = [
 export default function PrivacyPolicyPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[{ name: "Privacy Policy", path: "/privacy-policy" }]} />
       <section
         className="py-16"
         style={{ backgroundColor: "var(--color-surface)" }}

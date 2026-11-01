@@ -3,6 +3,7 @@ import Image from "next/image";
 import { BeforeAfterSlider } from "@/components/BeforeAfterSlider";
 import { BEFORE_AFTER_PAIRS, GALLERY_IMAGES, OG_IMAGE } from "@/lib/media";
 import { BUSINESS } from "@/lib/business";
+import { BreadcrumbJsonLd } from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Gallery - Before & After Car Wash Photos",
@@ -20,6 +21,7 @@ export const metadata: Metadata = {
 export default function GalleryPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[{ name: "Gallery", path: "/gallery" }]} />
       <section
         className="py-16"
         style={{ backgroundColor: "var(--color-surface)" }}

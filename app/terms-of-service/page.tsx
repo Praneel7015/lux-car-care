@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
 import { OG_IMAGE } from "@/lib/media";
+import { BreadcrumbJsonLd } from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
@@ -62,6 +63,7 @@ const SECTIONS = [
 export default function TermsOfServicePage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[{ name: "Terms of Service", path: "/terms-of-service" }]} />
       <section
         className="py-16"
         style={{ backgroundColor: "var(--color-surface)" }}

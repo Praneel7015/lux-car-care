@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { BUSINESS } from "@/lib/business";
 import { MEDIA } from "@/lib/media";
+import { BreadcrumbJsonLd } from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "About Luxury Car Care - Our Story & Values",
@@ -32,6 +33,7 @@ const HOURS = [
 export default function AboutPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[{ name: "About", path: "/about" }]} />
       <section
         className="py-16"
         style={{ backgroundColor: "var(--color-surface)" }}
@@ -74,7 +76,7 @@ export default function AboutPage() {
                   We set out to change that. From the first day, we trained our team to follow a consistent 12-step process on every vehicle - exterior pre-rinse, foam cannon, hand-wash, wheel detailing, rinse, hand-dry, interior vacuum, dashboard wipe, glass cleaning, tyre dressing, and a final inspection.
                 </p>
                 <p>
-                  Today we serve hundreds of cars every month. Whether it's a quick express wash before work or a full interior-exterior detail over the weekend, we treat every car the same.
+                  Today we serve hundreds of cars every month. Whether it&apos;s a quick express wash before work or a full interior-exterior detail over the weekend, we treat every car the same.
                 </p>
               </div>
             </div>

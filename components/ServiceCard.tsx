@@ -3,10 +3,9 @@ import { Service } from "@/lib/services";
 
 interface ServiceCardProps {
   service: Service;
-  variant?: "preview" | "full";
 }
 
-export function ServiceCard({ service, variant = "preview" }: ServiceCardProps) {
+export function ServiceCard({ service }: ServiceCardProps) {
   const isPriceByQuote = service.pricing === "by-quote";
 
   return (

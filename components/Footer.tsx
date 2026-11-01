@@ -26,14 +26,15 @@ export function Footer() {
 
   return (
     <footer style={{ backgroundColor: "var(--color-obsidian)" }}>
-      <div className="mx-auto max-w-7xl px-5 py-12 lg:px-16">
+      {/* Bottom room so the floating call / WhatsApp buttons never cover footer text */}
+      <div className="mx-auto max-w-7xl px-5 pt-12 pb-36 sm:pb-28 lg:px-16">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <Logo />
             <p
               className="mt-4 text-sm leading-relaxed"
-              style={{ color: "rgba(250,248,245,0.4)" }}
+              style={{ color: "rgba(250,248,245,0.65)" }}
             >
               {BUSINESS.tagline} Walk-ins always welcome.
             </p>
@@ -43,7 +44,7 @@ export function Footer() {
           <div>
             <h3
               className="mb-4 text-xs font-semibold uppercase tracking-widest"
-              style={{ color: "rgba(250,248,245,0.3)", fontFamily: "var(--font-body)" }}
+              style={{ color: "rgba(250,248,245,0.65)", fontFamily: "var(--font-body)" }}
             >
               Pages
             </h3>
@@ -53,7 +54,7 @@ export function Footer() {
                   <Link
                     href={href}
                     className="text-sm transition-colors duration-150 hover:underline"
-                    style={{ color: "rgba(250,248,245,0.5)" }}
+                    style={{ color: "rgba(250,248,245,0.65)" }}
                   >
                     {label}
                   </Link>
@@ -66,7 +67,7 @@ export function Footer() {
           <div>
             <h3
               className="mb-4 text-xs font-semibold uppercase tracking-widest"
-              style={{ color: "rgba(250,248,245,0.3)", fontFamily: "var(--font-body)" }}
+              style={{ color: "rgba(250,248,245,0.65)", fontFamily: "var(--font-body)" }}
             >
               Hours
             </h3>
@@ -89,7 +90,7 @@ export function Footer() {
                 />
                 <span
                   className="text-xs"
-                  style={{ color: isOpen ? "#4ade80" : "rgba(250,248,245,0.3)" }}
+                  style={{ color: isOpen ? "#4ade80" : "rgba(250,248,245,0.65)" }}
                 >
                   {isOpen ? "Open right now" : "Currently closed"}
                 </span>
@@ -101,7 +102,7 @@ export function Footer() {
           <div>
             <h3
               className="mb-4 text-xs font-semibold uppercase tracking-widest"
-              style={{ color: "rgba(250,248,245,0.3)", fontFamily: "var(--font-body)" }}
+              style={{ color: "rgba(250,248,245,0.65)", fontFamily: "var(--font-body)" }}
             >
               Contact
             </h3>
@@ -110,7 +111,7 @@ export function Footer() {
                 <a
                   href={`tel:${BUSINESS.phoneE164}`}
                   className="font-mono transition-opacity hover:opacity-70"
-                  style={{ color: "rgba(250,248,245,0.5)", fontFamily: "var(--font-mono)" }}
+                  style={{ color: "rgba(250,248,245,0.65)", fontFamily: "var(--font-mono)" }}
                 >
                   {BUSINESS.phoneDisplay}
                 </a>
@@ -121,7 +122,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="transition-opacity hover:opacity-70"
-                  style={{ color: "rgba(250,248,245,0.5)" }}
+                  style={{ color: "rgba(250,248,245,0.65)" }}
                 >
                   WhatsApp
                 </a>
@@ -130,7 +131,7 @@ export function Footer() {
                 <a
                   href={`mailto:${BUSINESS.email}`}
                   className="transition-opacity hover:opacity-70"
-                  style={{ color: "rgba(250,248,245,0.5)" }}
+                  style={{ color: "rgba(250,248,245,0.65)" }}
                 >
                   {BUSINESS.email}
                 </a>
@@ -141,7 +142,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="transition-opacity hover:opacity-70"
-                  style={{ color: "rgba(250,248,245,0.3)" }}
+                  style={{ color: "rgba(250,248,245,0.65)" }}
                 >
                   {BUSINESS.streetAddress}
                   <br />
@@ -154,11 +155,11 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div
-          className="mt-10 flex flex-col items-center justify-between gap-4 border-t pt-6 sm:flex-row"
+          className="mt-10 flex flex-col items-center justify-between gap-4 border-t pt-6 sm:flex-row sm:pr-20"
           style={{ borderColor: "rgba(250,248,245,0.08)" }}
         >
           <div className="flex flex-col gap-1.5 sm:flex-row sm:items-center sm:gap-5">
-            <p className="text-xs" style={{ color: "rgba(250,248,245,0.2)" }}>
+            <p className="text-xs" style={{ color: "rgba(250,248,245,0.65)" }}>
               © {new Date().getFullYear()} Luxury Car Care. All rights reserved.
             </p>
             <span
@@ -168,11 +169,18 @@ export function Footer() {
             >
               ·
             </span>
-            <p className="text-xs" style={{ color: "rgba(250,248,245,0.18)" }}>
+            {/* Developer credit, as on Praneel's other sites. Keep it. */}
+            <p className="text-xs" style={{ color: "rgba(250,248,245,0.55)" }}>
               Made by{" "}
-              <span style={{ color: "var(--color-gold)", opacity: 0.7 }}>
+              <a
+                href="https://praneel.sindhole.com/contact"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-2 transition-opacity hover:opacity-80"
+                style={{ color: "var(--color-gold)" }}
+              >
                 Praneel S
-              </span>
+              </a>
             </p>
           </div>
           <ul className="flex gap-4">
@@ -181,7 +189,7 @@ export function Footer() {
                 <Link
                   href={href}
                   className="text-xs transition-opacity hover:opacity-70"
-                  style={{ color: "rgba(250,248,245,0.25)" }}
+                  style={{ color: "rgba(250,248,245,0.55)" }}
                 >
                   {label}
                 </Link>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
 import { OG_IMAGE } from "@/lib/media";
+import { BreadcrumbJsonLd } from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -66,6 +67,7 @@ const SECTIONS = [
 export default function PrivacyPolicyPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[{ name: "Privacy Policy", path: "/privacy-policy" }]} />
       <section
         className="py-16"
         style={{ backgroundColor: "var(--color-surface)" }}
@@ -126,9 +128,9 @@ export default function PrivacyPolicyPage() {
             className="mt-10 rounded-xl border px-5 py-4 text-sm"
             style={{ borderColor: "var(--color-border)", color: "var(--color-muted)" }}
           >
-            This policy is written to align with India's Digital Personal Data Protection Act, 2023. It is
+            This policy is written to align with India&apos;s Digital Personal Data Protection Act, 2023. It is
             solid boilerplate for a small local business - have it reviewed by a lawyer before publishing,
-            especially as the DPDP Rules' phased obligations continue to take effect.
+            especially as the DPDP Rules&apos; phased obligations continue to take effect.
           </div>
 
           <div className="mt-10">

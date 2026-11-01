@@ -251,7 +251,7 @@ export default function Home() {
                     {footnote && (
                       <span
                         className="mt-1.5 block text-[10px] leading-snug"
-                        style={{ color: "var(--color-muted)", opacity: 0.75 }}
+                        style={{ color: "var(--color-muted)" }}
                       >
                         {footnote}
                       </span>

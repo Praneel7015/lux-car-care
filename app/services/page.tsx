@@ -5,11 +5,12 @@ import Link from "next/link";
 import { BUSINESS } from "@/lib/business";
 import { SERVICES, getServiceImage } from "@/lib/services";
 import { MEDIA } from "@/lib/media";
+import { BreadcrumbJsonLd } from "@/components/BreadcrumbJsonLd";
 
 export const metadata: Metadata = {
   title: "Services & Pricing",
   description:
-    "Full pricing for car wash and detailing at Luxury Car Care in Bidar. Express wash from ₹199, full detailing, ceramic coating for hatchback, sedan, and SUV near BVB College Road.",
+    "Car wash and detailing prices at Luxury Car Care, Bidar: express wash from ₹199, full detailing and ceramic coating for hatchbacks, sedans and SUVs.",
   alternates: { canonical: `${BUSINESS.siteUrl}/services` },
   openGraph: {
     title: "Services & Pricing - Luxury Car Care",
@@ -22,6 +23,7 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
+      <BreadcrumbJsonLd items={[{ name: "Services & Pricing", path: "/services" }]} />
       <section
         className="py-16"
         style={{ backgroundColor: "var(--color-surface)" }}

@@ -34,7 +34,7 @@ export function Footer() {
             <Logo />
             <p
               className="mt-4 text-sm leading-relaxed"
-              style={{ color: "rgba(250,248,245,0.4)" }}
+              style={{ color: "rgba(250,248,245,0.65)" }}
             >
               {BUSINESS.tagline} Walk-ins always welcome.
             </p>
@@ -44,7 +44,7 @@ export function Footer() {
           <div>
             <h3
               className="mb-4 text-xs font-semibold uppercase tracking-widest"
-              style={{ color: "rgba(250,248,245,0.3)", fontFamily: "var(--font-body)" }}
+              style={{ color: "rgba(250,248,245,0.65)", fontFamily: "var(--font-body)" }}
             >
               Pages
             </h3>
@@ -54,7 +54,7 @@ export function Footer() {
                   <Link
                     href={href}
                     className="text-sm transition-colors duration-150 hover:underline"
-                    style={{ color: "rgba(250,248,245,0.5)" }}
+                    style={{ color: "rgba(250,248,245,0.65)" }}
                   >
                     {label}
                   </Link>
@@ -67,7 +67,7 @@ export function Footer() {
           <div>
             <h3
               className="mb-4 text-xs font-semibold uppercase tracking-widest"
-              style={{ color: "rgba(250,248,245,0.3)", fontFamily: "var(--font-body)" }}
+              style={{ color: "rgba(250,248,245,0.65)", fontFamily: "var(--font-body)" }}
             >
               Hours
             </h3>
@@ -90,7 +90,7 @@ export function Footer() {
                 />
                 <span
                   className="text-xs"
-                  style={{ color: isOpen ? "#4ade80" : "rgba(250,248,245,0.3)" }}
+                  style={{ color: isOpen ? "#4ade80" : "rgba(250,248,245,0.65)" }}
                 >
                   {isOpen ? "Open right now" : "Currently closed"}
                 </span>
@@ -102,7 +102,7 @@ export function Footer() {
           <div>
             <h3
               className="mb-4 text-xs font-semibold uppercase tracking-widest"
-              style={{ color: "rgba(250,248,245,0.3)", fontFamily: "var(--font-body)" }}
+              style={{ color: "rgba(250,248,245,0.65)", fontFamily: "var(--font-body)" }}
             >
               Contact
             </h3>
@@ -111,7 +111,7 @@ export function Footer() {
                 <a
                   href={`tel:${BUSINESS.phoneE164}`}
                   className="font-mono transition-opacity hover:opacity-70"
-                  style={{ color: "rgba(250,248,245,0.5)", fontFamily: "var(--font-mono)" }}
+                  style={{ color: "rgba(250,248,245,0.65)", fontFamily: "var(--font-mono)" }}
                 >
                   {BUSINESS.phoneDisplay}
                 </a>
@@ -122,7 +122,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="transition-opacity hover:opacity-70"
-                  style={{ color: "rgba(250,248,245,0.5)" }}
+                  style={{ color: "rgba(250,248,245,0.65)" }}
                 >
                   WhatsApp
                 </a>
@@ -131,7 +131,7 @@ export function Footer() {
                 <a
                   href={`mailto:${BUSINESS.email}`}
                   className="transition-opacity hover:opacity-70"
-                  style={{ color: "rgba(250,248,245,0.5)" }}
+                  style={{ color: "rgba(250,248,245,0.65)" }}
                 >
                   {BUSINESS.email}
                 </a>
@@ -142,7 +142,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="transition-opacity hover:opacity-70"
-                  style={{ color: "rgba(250,248,245,0.3)" }}
+                  style={{ color: "rgba(250,248,245,0.65)" }}
                 >
                   {BUSINESS.streetAddress}
                   <br />
@@ -159,7 +159,7 @@ export function Footer() {
           style={{ borderColor: "rgba(250,248,245,0.08)" }}
         >
           <div className="flex flex-col gap-1.5 sm:flex-row sm:items-center sm:gap-5">
-            <p className="text-xs" style={{ color: "rgba(250,248,245,0.5)" }}>
+            <p className="text-xs" style={{ color: "rgba(250,248,245,0.65)" }}>
               © {new Date().getFullYear()} Luxury Car Care. All rights reserved.
             </p>
             <span

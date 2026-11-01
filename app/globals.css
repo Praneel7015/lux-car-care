@@ -10,7 +10,7 @@
   --color-surface:    #F0EDE8;   /* card surfaces, alternating sections */
   --color-gold:       #C9952A;   /* CTA buttons, price highlights */
   --color-gold-text:  #8B6510;   /* gold as text/link on light bg (passes AA) */
-  --color-muted:      #9C9489;   /* tertiary text */
+  --color-muted:      #70695F;   /* tertiary text on light surfaces */
   --color-border:     #E0DAD4;   /* light warm border */
 
   /* Typography */

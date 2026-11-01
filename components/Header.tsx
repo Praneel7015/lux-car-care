@@ -85,7 +85,7 @@ export function Header() {
                 href={href}
                 className="rounded-lg px-3.5 py-2 text-sm font-medium transition-colors duration-150"
                 style={{
-                  color: pathname === href ? "var(--color-parchment)" : "rgba(250,248,245,0.45)",
+                  color: pathname === href ? "var(--color-parchment)" : "rgba(250,248,245,0.65)",
                   backgroundColor: pathname === href ? "rgba(255,255,255,0.07)" : "transparent",
                 }}
                 aria-current={pathname === href ? "page" : undefined}
@@ -100,7 +100,7 @@ export function Header() {
             <a
               href={`tel:${BUSINESS.phoneE164}`}
               className="font-mono text-sm font-medium tracking-tight transition-opacity hover:opacity-70"
-              style={{ color: "rgba(250,248,245,0.45)", fontFamily: "var(--font-mono)" }}
+              style={{ color: "rgba(250,248,245,0.65)", fontFamily: "var(--font-mono)" }}
             >
               {BUSINESS.phoneDisplay}
             </a>
@@ -164,6 +164,7 @@ export function Header() {
           pointerEvents: open ? "auto" : "none",
         }}
         aria-hidden={!open}
+        inert={!open}
       >
         {/* Backdrop */}
         <div
@@ -219,7 +220,7 @@ export function Header() {
             <a
               href={`tel:${BUSINESS.phoneE164}`}
               className="block font-mono text-sm transition-opacity hover:opacity-70"
-              style={{ color: "rgba(250,248,245,0.4)", fontFamily: "var(--font-mono)" }}
+              style={{ color: "rgba(250,248,245,0.65)", fontFamily: "var(--font-mono)" }}
             >
               {BUSINESS.phoneDisplay}
             </a>
